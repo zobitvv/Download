@@ -120,7 +120,7 @@ export default function WebViewPage() {
           key={iframeKey}
           src={item.contentUrl}
           title={item.title} 
-          className="block w-full h-full border-0" 
+          className="absolute top-0 left-0 w-full h-full border-0" 
           allowFullScreen
           sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-downloads allow-fullscreen"
         />
