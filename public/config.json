@@ -1,9 +1,9 @@
 
 {
   "appName": "ZobiView",
-  "appLogoUrl": "Rocket",
-  "launchMessage": "Welcome to ZobiView! Explore our collection of web tools and utilities.",
-  "contactWhatsApp": "https://wa.me/yourwhatsappnumber",
+  "appLogoUrl": "Zap",
+  "launchMessage": "Welcome to ZobiView! Your portal to many tools.",
+  "contactWhatsApp": "https://wa.me/1234567890",
   "groupWhatsApp": "https://chat.whatsapp.com/yourgroupinvite",
   "facebookProfile": "https://facebook.com/yourprofile",
   "theme": {
@@ -12,69 +12,81 @@
     "accentColor": "#8E2DE2",
     "bodyFont": "Josefin Sans",
     "headlineFont": "Space Grotesk",
-    "contentDescription": "ZobiView is your gateway to a collection of useful web tools and resources, presented in a clean and accessible interface."
+    "contentDescription": "A versatile app for accessing various web utilities and information."
   },
   "dailyMessages": [
-    "Tip of the day: Stay curious and keep exploring!",
-    "Don't forget to check out our latest tools.",
-    "Have a productive day with ZobiView!",
-    "New features and tools are added regularly."
+    "Have a great day exploring!",
+    "Discover something new today in ZobiView.",
+    "Tip: Long-press an item for more options (future feature)!",
+    "Stay curious and keep learning."
   ],
   "webViews": [
     {
-      "id": "sim-tracker",
-      "title": "SIM Tracker",
-      "icon": "UsersRound",
-      "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "sim person",
+      "id": "simtracker",
+      "title": "Sim Tracker",
+      "icon": "Smartphone",
       "contentUrl": "https://www.simstracker.com/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Find SIM information and details."
+      "descriptiveText": "Track SIM information."
     },
     {
-      "id": "mix-data-astola",
-      "title": "Mix Data Tools",
+      "id": "mixdata",
+      "title": "Astola Mixdata",
       "icon": "DatabaseZap",
-      "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "data tools",
       "contentUrl": "https://astola-studio.site/mixdata/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Access a variety of mixed data utilities."
+      "descriptiveText": "Various data tools."
     },
     {
-      "id": "cnic-information",
+      "id": "cnicinfo",
       "title": "CNIC Information",
       "icon": "Fingerprint",
-      "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "id card",
       "contentUrl": "https://live-tracker.com.pk/cnic-information/",
-      "rewardedAdRequired": false,
+      "rewardedAdRequired": true,
       "showDescriptiveText": true,
-      "descriptiveText": "USE VPN if site show error."
+      "descriptiveText": "USE VPN if site show error. Access CNIC details."
     },
     {
-      "id": "hd-whatsapp-profile",
-      "title": "HD WhatsApp Profile Tool",
-      "icon": "UserCircle2",
-      "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "whatsapp profile",
+      "id": "fullppwhatsapp",
+      "title": "HD WhatsApp DP",
+      "icon": "UserCircle",
       "contentUrl": "https://fullpp-by-bandaheali.onrender.com/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "With this tool you can set WhatsApp profile in HD and its quality will not loose."
+      "descriptiveText": "Set WhatsApp profile in HD without quality loss."
     },
     {
-      "id": "designify-editor",
-      "title": "Designify Photo Editor",
+      "id": "designify",
+      "title": "Designify",
       "icon": "Wand2",
-      "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "photo edit",
       "contentUrl": "https://www.designify.com/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Edit your pictures with Designify's powerful tools."
+      "descriptiveText": "Edit your pictures with AI."
+    },
+    {
+      "id": "placeholder1",
+      "title": "Placeholder Tool A",
+      "icon": "Tool",
+      "thumbnailUrl": "https://placehold.co/300x200.png?text=Tool+A",
+      "dataAiHint": "utility tool",
+      "contentUrl": "about:blank#toolA",
+      "rewardedAdRequired": false,
+      "showDescriptiveText": true,
+      "descriptiveText": "A useful placeholder utility."
+    },
+    {
+      "id": "placeholder2",
+      "title": "Placeholder Service B",
+      "icon": "Globe",
+       "thumbnailUrl": "https://placehold.co/300x200.png?text=Service+B",
+      "dataAiHint": "online service",
+      "htmlContent": "<h1>Service B Coming Soon</h1><p>This is HTML content for Service B.</p>",
+      "rewardedAdRequired": true,
+      "showDescriptiveText": true,
+      "descriptiveText": "Details about upcoming Service B."
     }
   ]
 }

@@ -4,26 +4,23 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import DynamicIcon from '@/components/dynamic-icon';
-import { AppConfig } from '@/lib/config';
+import type { AppConfig } from '@/lib/config'; // Import AppConfig type
 import { Share2, Bell, MessageSquare, Facebook, Users } from 'lucide-react';
 
 interface TopBarProps {
   appName: string;
+  appLogoUrl: string; // Added to accept logo from config
   contactWhatsApp: string;
   groupWhatsApp: string;
   facebookProfile: string;
 }
 
-const TopBar: React.FC<TopBarProps> = ({ appName, contactWhatsApp, groupWhatsApp, facebookProfile }) => {
-  // For app logo, assuming appLogoUrl from config can be a Lucide icon name
-  // If it were a URL, we'd use <Image />
-  const appLogoIconName = "Rocket"; // Default or from config if it were designed that way
-
+export default function TopBar({ appName, appLogoUrl, contactWhatsApp, groupWhatsApp, facebookProfile }: TopBarProps): JSX.Element {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <DynamicIcon name={appLogoIconName} className="h-7 w-7 text-primary" />
+          <DynamicIcon name={appLogoUrl} className="h-7 w-7 text-primary" />
           <span className="font-headline text-xl font-bold text-foreground">{appName}</span>
         </Link>
         <nav className="flex items-center gap-1 sm:gap-1">
@@ -63,6 +60,4 @@ const TopBar: React.FC<TopBarProps> = ({ appName, contactWhatsApp, groupWhatsApp
       </div>
     </header>
   );
-};
-
-export default TopBar;
+}

@@ -28,7 +28,13 @@ export default async function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased flex flex-col min-h-screen">
-        <TopBar appName={config.appName} contactWhatsApp={config.contactWhatsApp} groupWhatsApp={config.groupWhatsApp} facebookProfile={config.facebookProfile} />
+        <TopBar
+          appName={config.appName}
+          appLogoUrl={config.appLogoUrl} // Pass appLogoUrl from config
+          contactWhatsApp={config.contactWhatsApp}
+          groupWhatsApp={config.groupWhatsApp}
+          facebookProfile={config.facebookProfile}
+        />
         <main className="flex-grow flex flex-col">
           {children}
         </main>
