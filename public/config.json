@@ -16,28 +16,6 @@
   },
   "webViews": [
     {
-      "id": "google-search",
-      "title": "Google Search",
-      "icon": "Search",
-      "thumbnailUrl": "https://placehold.co/300x200.png",
-      "dataAiHint": "search engine",
-      "contentUrl": "https://www.google.com",
-      "rewardedAdRequired": true,
-      "showDescriptiveText": true,
-      "descriptiveText": "Access the world's information with Google Search. Watch a short ad to proceed."
-    },
-    {
-      "id": "remove-bg-tool",
-      "title": "Background Remover (remove.bg)",
-      "icon": "Scissors",
-      "thumbnailUrl": "https://placehold.co/300x200.png",
-      "dataAiHint": "background removal",
-      "contentUrl": "https://www.remove.bg/",
-      "rewardedAdRequired": false,
-      "showDescriptiveText": true,
-      "descriptiveText": "Easily remove the background from your images using this online tool. Upload an image to get started."
-    },
-    {
       "id": "utility-converter",
       "title": "Unit Converter",
       "icon": "Replace",
@@ -79,13 +57,35 @@
       "rewardedAdRequired": true,
       "showDescriptiveText": true,
       "descriptiveText": "A simple online notepad for your quick thoughts and reminders. To save more than 3 notes, please consider watching an ad."
+    },
+    {
+      "id": "google-search",
+      "title": "Google Search",
+      "icon": "Search",
+      "thumbnailUrl": "https://placehold.co/300x200.png",
+      "dataAiHint": "search engine",
+      "contentUrl": "https://www.google.com/webhp?igu=1",
+      "rewardedAdRequired": true,
+      "showDescriptiveText": true,
+      "descriptiveText": "Access the Google search engine directly. This requires watching a short ad first."
+    },
+    {
+      "id": "image-enhancer-aftabai",
+      "title": "Image Enhancer (aftabai.xyz)",
+      "icon": "ImageIcon",
+      "thumbnailUrl": "https://placehold.co/300x200.png",
+      "dataAiHint": "image enhance",
+      "contentUrl": "https://aftabai.xyz/image_enhance.php",
+      "rewardedAdRequired": false,
+      "showDescriptiveText": true,
+      "descriptiveText": "Enhance your images using this tool from aftabai.xyz. Allows image uploads."
     }
   ],
   "dailyMessages": [
-    "Have a wonderful day!",
-    "Tip: Stay hydrated by drinking plenty of water.",
-    "Did you know? ZobiView is regularly updated with new features.",
-    "Don't forget to take a short break and stretch!",
-    "Explore a new tool today and learn something new!"
+    "Welcome back to ZobiView! Hope you have a productive day.",
+    "Did you know? You can customize the WebViews in config.json!",
+    "Have a great day exploring the web!",
+    "New features are always being added. Stay tuned!",
+    "Don't forget to share ZobiView with your friends if you find it useful!"
   ]
 }
