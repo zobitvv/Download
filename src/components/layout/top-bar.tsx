@@ -2,25 +2,37 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import DynamicIcon from '@/components/dynamic-icon';
-import type { AppConfig } from '@/lib/config'; // Import AppConfig type
 import { Share2, Bell, MessageSquare, Facebook, Users } from 'lucide-react';
 
 interface TopBarProps {
   appName: string;
-  appLogoUrl: string; // Added to accept logo from config
+  appLogoUrl: string;
   contactWhatsApp: string;
   groupWhatsApp: string;
   facebookProfile: string;
 }
 
 export default function TopBar({ appName, appLogoUrl, contactWhatsApp, groupWhatsApp, facebookProfile }: TopBarProps): JSX.Element {
+  const isCustomLogo = appLogoUrl && appLogoUrl.startsWith('/');
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <DynamicIcon name={appLogoUrl} className="h-7 w-7 text-primary" />
+          {isCustomLogo ? (
+            <Image
+              src={appLogoUrl}
+              alt={`${appName} logo`}
+              width={36}
+              height={36}
+              className="h-9 w-9 object-contain"
+            />
+          ) : (
+            <DynamicIcon name={appLogoUrl || 'LayoutPanelLeft'} className="h-7 w-7 text-primary" />
+          )}
           <span className="font-headline text-xl font-bold text-foreground">{appName}</span>
         </Link>
         <nav className="flex items-center gap-1 sm:gap-1">
@@ -50,7 +62,6 @@ export default function TopBar({ appName, appLogoUrl, contactWhatsApp, groupWhat
                 url: window.location.origin,
               }).catch(console.error);
             } else {
-              // Fallback for browsers that don't support navigator.share
               alert('Sharing is not supported on this browser. You can copy the URL.');
             }
           }}>
