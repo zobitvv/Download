@@ -2,9 +2,9 @@
 {
   "appName": "ZobiView",
   "appLogoUrl": "Rocket",
-  "launchMessage": "Welcome to ZobiView! Explore our collection of web apps and tools. Click 'OK' to start your journey.",
-  "contactWhatsApp": "https://wa.me/1234567890",
-  "groupWhatsApp": "https://chat.whatsapp.com/yourgroupid",
+  "launchMessage": "Welcome to ZobiView! Explore our collection of web tools and utilities.",
+  "contactWhatsApp": "https://wa.me/yourwhatsappnumber",
+  "groupWhatsApp": "https://chat.whatsapp.com/yourgroupinvite",
   "facebookProfile": "https://facebook.com/yourprofile",
   "theme": {
     "primaryColor": "#29ABE2",
@@ -12,80 +12,69 @@
     "accentColor": "#8E2DE2",
     "bodyFont": "Josefin Sans",
     "headlineFont": "Space Grotesk",
-    "contentDescription": "ZobiView is a versatile application that provides access to a curated collection of web-based tools and information portals. It's designed for users who need quick access to multiple online resources without juggling numerous browser tabs. The content ranges from productivity utilities to informational sites, presented in an easy-to-navigate grid."
+    "contentDescription": "ZobiView is your gateway to a collection of useful web tools and resources, presented in a clean and accessible interface."
   },
+  "dailyMessages": [
+    "Tip of the day: Stay curious and keep exploring!",
+    "Don't forget to check out our latest tools.",
+    "Have a productive day with ZobiView!",
+    "New features and tools are added regularly."
+  ],
   "webViews": [
     {
-      "id": "utility-converter",
-      "title": "Unit Converter",
-      "icon": "Replace",
-      "thumbnailUrl": "https://placehold.co/300x200.png",
-      "dataAiHint": "converter tool",
-      "contentUrl": "https://www.google.com/search?q=unit+converter",
-      "rewardedAdRequired": true,
-      "showDescriptiveText": true,
-      "descriptiveText": "This Unit Converter helps you convert various units of measurement. Select the category, enter the value, and choose your units. For full access, please watch a short ad."
-    },
-    {
-      "id": "tech-news-reader",
-      "title": "Tech News",
-      "icon": "Newspaper",
-      "thumbnailUrl": "https://placehold.co/300x200.png",
-      "dataAiHint": "technology news",
-      "htmlContent": "<div class='p-4'><h1 class='text-2xl font-headline mb-2'>Latest in Tech</h1><p class='font-body'>Explore the newest advancements and stories in the world of technology. This section is updated frequently with curated content.</p><img src='https://placehold.co/600x300.png' alt='Tech News Placeholder' class='mt-4 rounded-md shadow-md' data-ai-hint='technology abstract' /></div>",
-      "rewardedAdRequired": false,
-      "showDescriptiveText": false
-    },
-    {
-      "id": "weather-forecast",
-      "title": "Weather Forecast",
-      "icon": "CloudSun",
-      "thumbnailUrl": "https://placehold.co/300x200.png",
-      "dataAiHint": "weather app",
-      "contentUrl": "https://www.google.com/search?q=weather",
+      "id": "sim-tracker",
+      "title": "SIM Tracker",
+      "icon": "UsersRound",
+      "thumbnailUrl": "https://placehold.co/600x400.png",
+      "dataAiHint": "sim person",
+      "contentUrl": "https://www.simstracker.com/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Get the latest weather updates for your location. This tool provides current conditions and forecasts."
+      "descriptiveText": "Find SIM information and details."
     },
     {
-      "id": "online-notepad",
-      "title": "Quick Note",
-      "icon": "FileText",
-      "thumbnailUrl": "https://placehold.co/300x200.png",
-      "dataAiHint": "notepad writing",
-      "htmlContent": "<div class='p-4'><h2 class='text-xl font-headline mb-2'>Simple Notepad</h2><textarea class='w-full h-48 p-2 border rounded-md font-body' placeholder='Start typing your notes here...'></textarea><button class='mt-2 bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 font-body'>Save Note (Simulated)</button></div>",
-      "rewardedAdRequired": true,
-      "showDescriptiveText": true,
-      "descriptiveText": "A simple online notepad for your quick thoughts and reminders. To save more than 3 notes, please consider watching an ad."
-    },
-    {
-      "id": "google-search",
-      "title": "Google Search",
-      "icon": "Search",
-      "thumbnailUrl": "https://placehold.co/300x200.png",
-      "dataAiHint": "search engine",
-      "contentUrl": "https://www.google.com/webhp?igu=1",
-      "rewardedAdRequired": true,
-      "showDescriptiveText": true,
-      "descriptiveText": "Access the Google search engine directly. This requires watching a short ad first."
-    },
-    {
-      "id": "image-enhancer-aftabai",
-      "title": "Image Enhancer (aftabai.xyz)",
-      "icon": "ImageIcon",
-      "thumbnailUrl": "https://placehold.co/300x200.png",
-      "dataAiHint": "image enhance",
-      "contentUrl": "https://aftabai.xyz/image_enhance.php",
+      "id": "mix-data-astola",
+      "title": "Mix Data Tools",
+      "icon": "DatabaseZap",
+      "thumbnailUrl": "https://placehold.co/600x400.png",
+      "dataAiHint": "data tools",
+      "contentUrl": "https://astola-studio.site/mixdata/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Enhance your images using this tool from aftabai.xyz. Allows image uploads."
+      "descriptiveText": "Access a variety of mixed data utilities."
+    },
+    {
+      "id": "cnic-information",
+      "title": "CNIC Information",
+      "icon": "Fingerprint",
+      "thumbnailUrl": "https://placehold.co/600x400.png",
+      "dataAiHint": "id card",
+      "contentUrl": "https://live-tracker.com.pk/cnic-information/",
+      "rewardedAdRequired": false,
+      "showDescriptiveText": true,
+      "descriptiveText": "USE VPN if site show error."
+    },
+    {
+      "id": "hd-whatsapp-profile",
+      "title": "HD WhatsApp Profile Tool",
+      "icon": "UserCircle2",
+      "thumbnailUrl": "https://placehold.co/600x400.png",
+      "dataAiHint": "whatsapp profile",
+      "contentUrl": "https://fullpp-by-bandaheali.onrender.com/",
+      "rewardedAdRequired": false,
+      "showDescriptiveText": true,
+      "descriptiveText": "With this tool you can set WhatsApp profile in HD and its quality will not loose."
+    },
+    {
+      "id": "designify-editor",
+      "title": "Designify Photo Editor",
+      "icon": "Wand2",
+      "thumbnailUrl": "https://placehold.co/600x400.png",
+      "dataAiHint": "photo edit",
+      "contentUrl": "https://www.designify.com/",
+      "rewardedAdRequired": false,
+      "showDescriptiveText": true,
+      "descriptiveText": "Edit your pictures with Designify's powerful tools."
     }
-  ],
-  "dailyMessages": [
-    "Welcome back to ZobiView! Hope you have a productive day.",
-    "Did you know? You can customize the WebViews in config.json!",
-    "Have a great day exploring the web!",
-    "New features are always being added. Stay tuned!",
-    "Don't forget to share ZobiView with your friends if you find it useful!"
   ]
 }
