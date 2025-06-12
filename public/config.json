@@ -1,0 +1,61 @@
+{
+  "appName": "ZobiView",
+  "appLogoUrl": "Rocket",
+  "launchMessage": "Welcome to ZobiView! Explore our collection of web apps and tools. Click 'OK' to start your journey.",
+  "contactWhatsApp": "https://wa.me/1234567890",
+  "groupWhatsApp": "https://chat.whatsapp.com/yourgroupid",
+  "facebookProfile": "https://facebook.com/yourprofile",
+  "theme": {
+    "primaryColor": "#29ABE2",
+    "backgroundColor": "#F0F0F0",
+    "accentColor": "#8E2DE2",
+    "bodyFont": "PT Sans",
+    "headlineFont": "Space Grotesk",
+    "contentDescription": "ZobiView is a versatile application that provides access to a curated collection of web-based tools and information portals. It's designed for users who need quick access to multiple online resources without juggling numerous browser tabs. The content ranges from productivity utilities to informational sites, presented in an easy-to-navigate grid."
+  },
+  "webViews": [
+    {
+      "id": "utility-converter",
+      "title": "Unit Converter",
+      "icon": "Replace",
+      "thumbnailUrl": "https://placehold.co/300x200.png",
+      "dataAiHint": "converter tool",
+      "contentUrl": "https://www.google.com/search?q=unit+converter",
+      "rewardedAdRequired": true,
+      "showDescriptiveText": true,
+      "descriptiveText": "This Unit Converter helps you convert various units of measurement. Select the category, enter the value, and choose your units. For full access, please watch a short ad."
+    },
+    {
+      "id": "tech-news-reader",
+      "title": "Tech News",
+      "icon": "Newspaper",
+      "thumbnailUrl": "https://placehold.co/300x200.png",
+      "dataAiHint": "technology news",
+      "htmlContent": "<div class='p-4'><h1 class='text-2xl font-headline mb-2'>Latest in Tech</h1><p class='font-body'>Explore the newest advancements and stories in the world of technology. This section is updated frequently with curated content.</p><img src='https://placehold.co/600x300.png' alt='Tech News Placeholder' class='mt-4 rounded-md shadow-md' data-ai-hint='technology abstract' /></div>",
+      "rewardedAdRequired": false,
+      "showDescriptiveText": false
+    },
+    {
+      "id": "weather-forecast",
+      "title": "Weather Forecast",
+      "icon": "CloudSun",
+      "thumbnailUrl": "https://placehold.co/300x200.png",
+      "dataAiHint": "weather app",
+      "contentUrl": "https://www.google.com/search?q=weather",
+      "rewardedAdRequired": false,
+      "showDescriptiveText": true,
+      "descriptiveText": "Get the latest weather updates for your location. This tool provides current conditions and forecasts."
+    },
+    {
+      "id": "online-notepad",
+      "title": "Quick Note",
+      "icon": "FileText",
+      "thumbnailUrl": "https://placehold.co/300x200.png",
+      "dataAiHint": "notepad writing",
+      "htmlContent": "<div class='p-4'><h2 class='text-xl font-headline mb-2'>Simple Notepad</h2><textarea class='w-full h-48 p-2 border rounded-md font-body' placeholder='Start typing your notes here...'></textarea><button class='mt-2 bg-primary text-primary-foreground px-4 py-2 rounded-md hover:bg-primary/90 font-body'>Save Note (Simulated)</button></div>",
+      "rewardedAdRequired": true,
+      "showDescriptiveText": true,
+      "descriptiveText": "A simple online notepad for your quick thoughts and reminders. To save more than 3 notes, please consider watching an ad."
+    }
+  ]
+}
