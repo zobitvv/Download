@@ -14,14 +14,6 @@
     "headlineFont": "Space Grotesk",
     "contentDescription": "ZobiView is a versatile application that provides access to a curated collection of web-based tools and information portals. It's designed for users who need quick access to multiple online resources without juggling numerous browser tabs. The content ranges from productivity utilities to informational sites, presented in an easy-to-navigate grid."
   },
-  "dailyMessages": [
-    "Tip of the day: Stay hydrated and take short breaks!",
-    "Explore a new tool today and expand your horizons.",
-    "Did you know? You can customize the theme in the AI Optimizer section!",
-    "Welcome back to ZobiView! We're glad to see you.",
-    "Have a feature request? Let us know!",
-    "Check out the latest tech news in our Tech News section."
-  ],
   "webViews": [
     {
       "id": "utility-converter",
@@ -65,6 +57,24 @@
       "rewardedAdRequired": true,
       "showDescriptiveText": true,
       "descriptiveText": "A simple online notepad for your quick thoughts and reminders. To save more than 3 notes, please consider watching an ad."
+    },
+    {
+      "id": "google-search",
+      "title": "Google Search",
+      "icon": "Search",
+      "thumbnailUrl": "https://placehold.co/300x200.png",
+      "dataAiHint": "search engine",
+      "contentUrl": "https://www.google.com",
+      "rewardedAdRequired": true,
+      "showDescriptiveText": true,
+      "descriptiveText": "Access the Google search engine. Please watch a short ad to proceed to view the content. This is for testing ad functionality."
     }
+  ],
+  "dailyMessages": [
+    "Have a wonderful day!",
+    "Remember to stay hydrated.",
+    "Quick tip: You can customize the theme further in the AI Theme Optimizer below!",
+    "Check back often for new features and content.",
+    "Exploring something new today?"
   ]
 }
