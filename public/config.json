@@ -9,7 +9,7 @@
     "primaryColor": "#29ABE2",
     "backgroundColor": "#F0F0F0",
     "accentColor": "#8E2DE2",
-    "bodyFont": "PT Sans",
+    "bodyFont": "Josefin Sans",
     "headlineFont": "Space Grotesk",
     "contentDescription": "ZobiView is a versatile application that provides access to a curated collection of web-based tools and information portals. It's designed for users who need quick access to multiple online resources without juggling numerous browser tabs. The content ranges from productivity utilities to informational sites, presented in an easy-to-navigate grid."
   },
@@ -33,7 +33,8 @@
       "dataAiHint": "technology news",
       "htmlContent": "<div class='p-4'><h1 class='text-2xl font-headline mb-2'>Latest in Tech</h1><p class='font-body'>Explore the newest advancements and stories in the world of technology. This section is updated frequently with curated content.</p><img src='https://placehold.co/600x300.png' alt='Tech News Placeholder' class='mt-4 rounded-md shadow-md' data-ai-hint='technology abstract' /></div>",
       "rewardedAdRequired": false,
-      "showDescriptiveText": false
+      "showDescriptiveText": false,
+      "descriptiveText": ""
     },
     {
       "id": "weather-forecast",
