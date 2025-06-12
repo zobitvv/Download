@@ -3,6 +3,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import TopBar from '@/components/layout/top-bar';
 import { getConfig } from '@/lib/config';
+import UpdateNotifier from '@/components/update-notifier';
 
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default async function RootLayout({
         <main className="flex-grow container mx-auto px-4 py-8">
           {children}
         </main>
+        <UpdateNotifier />
         <Toaster />
       </body>
     </html>
