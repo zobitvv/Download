@@ -1,18 +1,16 @@
 
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useParams } from 'next/navigation';
-import { getConfig, type WebViewItemConfig, type AppConfig } from '@/lib/config'; // Assuming getConfig can be adapted or use a client-side fetcher for config
+import { getConfig, type WebViewItemConfig, type AppConfig } from '@/lib/config';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Loader2 } from 'lucide-react';
 import DynamicIcon from '@/components/dynamic-icon';
 
-// Helper function to fetch config on client side or pass as props if SSR/SSG
-// For this example, we'll fetch it on client side for simplicity.
-// In a real app, you might pass config data as props from a server component.
+// Helper function to fetch config on client side
 async function getClientConfig(): Promise<AppConfig> {
   const res = await fetch('/config.json');
   if (!res.ok) {
@@ -81,8 +79,12 @@ export default function WebViewPage() {
 
   const handleWatchAd = () => {
     // Simulate watching an ad
+    // In a real app, you'd integrate with AdMob SDK here.
+    // Example: Initialize and show a rewarded ad using a test ID.
+    // Google's official Rewarded Ad test ID (Android): ca-app-pub-3940256099942544/5224354917
+    // Google's official Rewarded Ad test ID (iOS): ca-app-pub-3940256099942544/1712485313
+    // For web, you'd use the Google Mobile Ads SDK for HTML5 or a similar web-based ad solution.
     setAdWatched(true);
-    // In a real app, you'd integrate with AdMob here
   };
 
   const renderContent = () => {
@@ -142,16 +144,19 @@ export default function WebViewPage() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="font-body">This content requires you to watch a short ad to proceed.</p>
-            <Alert className="text-left bg-blue-50 border-blue-200">
+            <Alert className="text-left bg-blue-50 border-blue-200 dark:bg-blue-900/30 dark:border-blue-700">
               <DynamicIcon name="Info" className="h-5 w-5 text-primary" />
               <AlertTitle className="font-headline text-primary">Rewarded Ad Placeholder</AlertTitle>
               <AlertDescription className="font-body">
-                In a real app, an AdMob rewarded ad would play here.
+                In a real app, an AdMob rewarded ad would be requested and displayed here.
+                You would use an Ad Unit ID, for example, Google's test ID:
+                <code className="block text-xs bg-gray-100 dark:bg-gray-800 p-1 rounded my-1">ca-app-pub-3940256099942544/5224354917</code>
+                (This is a test ID and will not generate revenue).
               </AlertDescription>
             </Alert>
             <Button onClick={handleWatchAd} size="lg" className="font-body">
               <DynamicIcon name="PlayCircle" className="mr-2 h-5 w-5" />
-              Watch Ad to Continue
+              Watch Ad to Continue (Simulated)
             </Button>
           </CardContent>
         </Card>
@@ -160,8 +165,15 @@ export default function WebViewPage() {
       )}
 
       <div className="mt-8 p-4 bg-muted text-center rounded-md shadow">
-        <p className="font-body text-sm text-muted-foreground">Banner Ad Placeholder</p>
+        <p className="font-body text-sm text-muted-foreground">
+          Banner Ad Placeholder
+        </p>
+        <p className="font-body text-xs text-muted-foreground/70 mt-1">
+          (In a real app, an AdMob banner ad could be placed here using a test ID like: 
+          <code className="bg-gray-100 dark:bg-gray-800 p-0.5 rounded">ca-app-pub-3940256099942544/6300978111</code>)
+        </p>
       </div>
     </div>
   );
 }
+
