@@ -49,7 +49,7 @@ export default function WebViewPage() {
 
   if (isLoading) {
     return (
-      <div className="flex flex-col items-center justify-center min-h-[calc(100vh-10rem)]">
+      <div className="flex flex-col flex-grow items-center justify-center p-4">
         <Loader2 className="h-12 w-12 animate-spin text-primary" />
         <p className="mt-4 text-lg font-body text-muted-foreground">Loading content...</p>
       </div>
@@ -58,21 +58,25 @@ export default function WebViewPage() {
 
   if (configError) {
     return (
-       <Alert variant="destructive" className="max-w-xl mx-auto">
-        <DynamicIcon name="AlertTriangle" className="h-4 w-4" />
-        <AlertTitle className="font-headline">Error</AlertTitle>
-        <AlertDescription className="font-body">{configError}</AlertDescription>
-      </Alert>
+       <div className="flex flex-col flex-grow items-center justify-center p-4">
+        <Alert variant="destructive" className="max-w-xl w-full">
+          <DynamicIcon name="AlertTriangle" className="h-4 w-4" />
+          <AlertTitle className="font-headline">Error</AlertTitle>
+          <AlertDescription className="font-body">{configError}</AlertDescription>
+        </Alert>
+      </div>
     );
   }
 
   if (!item) {
      return (
-       <Alert variant="destructive" className="max-w-xl mx-auto">
-         <DynamicIcon name="AlertTriangle" className="h-4 w-4" />
-        <AlertTitle className="font-headline">Error</AlertTitle>
-        <AlertDescription className="font-body">Content not found.</AlertDescription>
-      </Alert>
+       <div className="flex flex-col flex-grow items-center justify-center p-4">
+         <Alert variant="destructive" className="max-w-xl w-full">
+           <DynamicIcon name="AlertTriangle" className="h-4 w-4" />
+          <AlertTitle className="font-headline">Error</AlertTitle>
+          <AlertDescription className="font-body">Content not found.</AlertDescription>
+        </Alert>
+      </div>
     );
   }
 
@@ -91,8 +95,8 @@ export default function WebViewPage() {
       return (
         <iframe
           src={item.contentUrl}
-          title={item.title} // Title is still useful for accessibility
-          className="w-full h-full border-0 rounded-md shadow-lg"
+          title={item.title} 
+          className="w-full h-full border-0"
           allowFullScreen
           sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-downloads allow-fullscreen"
         />
@@ -101,18 +105,18 @@ export default function WebViewPage() {
     if (item.htmlContent) {
       return (
         <div
-          className="prose dark:prose-invert max-w-none p-4 bg-card rounded-md shadow-lg font-body h-full overflow-y-auto"
+          className="prose dark:prose-invert max-w-none p-4 bg-card font-body h-full overflow-y-auto"
           dangerouslySetInnerHTML={{ __html: item.htmlContent }}
         />
       );
     }
-    return <p className="font-body text-center p-4">No content available for this item.</p>;
+    return <div className="flex-grow flex items-center justify-center p-4"><p className="font-body text-center">No content available for this item.</p></div>;
   };
 
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col flex-grow">
       {item.rewardedAdRequired && !adWatched ? (
-        <Card className="text-center mb-4 shrink-0">
+        <Card className="text-center mb-4 shrink-0 rounded-none border-x-0">
           <CardHeader>
             <CardTitle className="font-headline">Access Restricted</CardTitle>
           </CardHeader>
@@ -122,11 +126,10 @@ export default function WebViewPage() {
               <DynamicIcon name="Info" className="h-5 w-5 text-primary" />
               <AlertTitle className="font-headline text-primary">Rewarded Ad Placeholder</AlertTitle>
               <AlertDescription className="font-body">
-                In a real app, an AdMob rewarded ad would be requested and displayed here.
-                You would use an Ad Unit ID, for example, Google's test ID: 
-                <code className="block text-xs bg-gray-100 dark:bg-gray-800 p-1 rounded my-1">ca-app-pub-3940256099942544/5224354917</code> (Android) or 
-                <code className="block text-xs bg-gray-100 dark:bg-gray-800 p-1 rounded my-1">ca-app-pub-3940256099942544/1712485313</code> (iOS).
-                (This is a test ID and will not generate revenue).
+                In a real app, an AdMob rewarded ad would be requested and displayed here using a real Ad Unit ID. 
+                Google's test ID (Android): <code className="block text-xs bg-gray-100 dark:bg-gray-800 p-1 rounded my-1">ca-app-pub-3940256099942544/5224354917</code>.
+                Google's test ID (iOS): <code className="block text-xs bg-gray-100 dark:bg-gray-800 p-1 rounded my-1">ca-app-pub-3940256099942544/1712485313</code>.
+                (These are test IDs and will not generate revenue).
               </AlertDescription>
             </Alert>
             <Button onClick={handleWatchAd} size="lg" className="font-body">
@@ -141,7 +144,7 @@ export default function WebViewPage() {
         </div>
       )}
 
-      <div className="mt-auto p-4 bg-muted text-center rounded-md shadow shrink-0">
+      <div className="p-4 bg-muted text-center shadow shrink-0 rounded-none">
         <p className="font-body text-sm text-muted-foreground">
           Banner Ad Placeholder
         </p>

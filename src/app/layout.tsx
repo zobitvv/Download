@@ -29,7 +29,7 @@ export default async function RootLayout({
       </head>
       <body className="font-body antialiased flex flex-col min-h-screen">
         <TopBar appName={config.appName} contactWhatsApp={config.contactWhatsApp} groupWhatsApp={config.groupWhatsApp} facebookProfile={config.facebookProfile} />
-        <main className="flex-grow container mx-auto px-4 py-8">
+        <main className="flex-grow flex flex-col">
           {children}
         </main>
         <UpdateNotifier />
