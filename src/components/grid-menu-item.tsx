@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Card } from '@/components/ui/card';
@@ -13,11 +14,11 @@ const GridMenuItem: React.FC<GridMenuItemProps> = ({ item }) => {
   return (
     <Link href={`/webview/${item.id}`} className="block group h-full">
       <Card className="h-full flex flex-col overflow-hidden transition-all duration-300 ease-in-out group-hover:shadow-xl group-hover:border-primary relative bg-card">
-        {item.thumbnailUrl && (
+        {item.thumbnailUrl && item.thumbnailUrl.trim() !== '' ? (
           <div className="aspect-[4/3] w-full overflow-hidden relative">
             <Image
               src={item.thumbnailUrl}
-              alt={item.title}
+              alt={item.title || 'Item thumbnail'}
               fill
               sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
               style={{ objectFit: 'cover' }}
@@ -33,25 +34,25 @@ const GridMenuItem: React.FC<GridMenuItemProps> = ({ item }) => {
               </Badge>
             )}
           </div>
-        )}
+        ) : null}
 
         <div
           className={`p-3 flex flex-col flex-grow ${
-            !item.thumbnailUrl
+            !(item.thumbnailUrl && item.thumbnailUrl.trim() !== '')
               ? 'justify-center items-center text-center'
               : 'justify-end' 
           }`}
         >
           <h3
             className={`font-headline ${
-              item.thumbnailUrl ? 'text-sm' : 'text-lg'
+              (item.thumbnailUrl && item.thumbnailUrl.trim() !== '') ? 'text-sm' : 'text-lg'
             } font-semibold group-hover:text-primary transition-colors truncate w-full`}
             title={item.title}
           >
             {item.title}
           </h3>
 
-          {!item.thumbnailUrl && (
+          {!(item.thumbnailUrl && item.thumbnailUrl.trim() !== '') && (
             <div className="flex flex-col items-center text-center mt-2">
               <DynamicIcon name={item.icon} className="h-10 w-10 text-muted-foreground mb-2" />
               {item.descriptiveText && item.showDescriptiveText ? (

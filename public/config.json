@@ -1,8 +1,8 @@
 
 {
   "appName": "ZobiView",
-  "appLogoUrl": "Zap",
-  "launchMessage": "Welcome to ZobiView! Explore a variety of web tools.",
+  "appLogoUrl": "AppWindow",
+  "launchMessage": "Welcome to ZobiView! Your portal to a world of web utilities. Explore and enjoy!",
   "contactWhatsApp": "https://wa.me/1234567890",
   "groupWhatsApp": "https://chat.whatsapp.com/yourgroupinvite",
   "facebookProfile": "https://facebook.com/yourprofile",
@@ -12,69 +12,102 @@
     "accentColor": "#8E2DE2",
     "bodyFont": "Josefin Sans",
     "headlineFont": "Space Grotesk",
-    "contentDescription": "A multi-webview container app with various tools and resources."
+    "contentDescription": "A multi-webview container app with a focus on utility and social media tools."
   },
+  "dailyMessages": [
+    "Have a great day exploring ZobiView!",
+    "Discover something new in ZobiView today!",
+    "Stay connected with ZobiView's tools.",
+    "Tip: Check out our latest additions!",
+    "Your daily dose of web utilities, right here."
+  ],
   "webViews": [
     {
       "id": "simtracker",
       "title": "SIM Tracker",
       "icon": "Smartphone",
-      "thumbnailUrl": "https://placehold.co/300x200.png",
-      "dataAiHint": "sim card",
       "contentUrl": "https://www.simstracker.com/",
+      "thumbnailUrl": "https://placehold.co/600x400.png",
+      "dataAiHint": "sim network",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Track SIM information."
+      "descriptiveText": "Track SIM card information."
     },
     {
       "id": "mixdata",
-      "title": "Mix Data",
+      "title": "Mix Data Tools",
       "icon": "Database",
-      "thumbnailUrl": "https://placehold.co/300x200.png",
-      "dataAiHint": "data server",
       "contentUrl": "https://astola-studio.site/mixdata/",
+      "thumbnailUrl": "https://placehold.co/600x400.png",
+      "dataAiHint": "data analysis",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Access mixed data resources."
+      "descriptiveText": "Various data utility tools."
     },
     {
       "id": "cnicinfo",
-      "title": "CNIC Info",
+      "title": "CNIC Information",
       "icon": "Fingerprint",
-      "thumbnailUrl": "https://placehold.co/300x200.png",
-      "dataAiHint": "id card",
       "contentUrl": "https://live-tracker.com.pk/cnic-information/",
+      "thumbnailUrl": "https://placehold.co/600x400.png",
+      "dataAiHint": "id card",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "USE VPN if site show error. Find CNIC information."
+      "descriptiveText": "USE VPN if site show error."
     },
     {
-      "id": "hdwhatsappdp",
-      "title": "HD WhatsApp DP",
-      "icon": "UserCircle",
-      "thumbnailUrl": "https://placehold.co/300x200.png",
-      "dataAiHint": "profile picture",
+      "id": "fullhdprofile",
+      "title": "HD Profile Picture Setter",
+      "icon": "UserCircle2",
       "contentUrl": "https://fullpp-by-bandaheali.onrender.com/",
+      "thumbnailUrl": "https://placehold.co/600x400.png",
+      "dataAiHint": "profile picture",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
       "descriptiveText": "Set WhatsApp profile in HD, quality will not be lost."
     },
     {
       "id": "designify",
-      "title": "Designify",
-      "icon": "Wand2",
-      "thumbnailUrl": "https://placehold.co/300x200.png",
-      "dataAiHint": "photo editor",
+      "title": "Designify Image Editor",
+      "icon": "ImageIcon",
       "contentUrl": "https://www.designify.com/",
+      "thumbnailUrl": "https://placehold.co/600x400.png",
+      "dataAiHint": "photo editing",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Edit photos with AI."
+      "descriptiveText": "Online image editing tools."
+    },
+    {
+      "id": "placeholder1",
+      "title": "Social Media Hub",
+      "icon": "Users",
+      "contentUrl": "about:blank#social",
+      "thumbnailUrl": "https://placehold.co/600x400.png",
+      "dataAiHint": "social media",
+      "rewardedAdRequired": false,
+      "showDescriptiveText": true,
+      "descriptiveText": "Access your favorite social platforms."
+    },
+    {
+      "id": "placeholder2",
+      "title": "Utility Tools",
+      "icon": "Wrench",
+      "contentUrl": "about:blank#utils",
+      "thumbnailUrl": "https://placehold.co/600x400.png",
+      "dataAiHint": "tools wrench",
+      "rewardedAdRequired": true,
+      "showDescriptiveText": true,
+      "descriptiveText": "A collection of useful utilities."
+    },
+    {
+      "id": "placeholder3",
+      "title": "News Feed",
+      "icon": "Newspaper",
+      "htmlContent": "<h1>Latest News</h1><p>Stay updated with our integrated news feed (HTML Content Example).</p>",
+      "thumbnailUrl": "https://placehold.co/600x400.png",
+      "dataAiHint": "news paper",
+      "rewardedAdRequired": false,
+      "showDescriptiveText": false
     }
-  ],
-  "dailyMessages": [
-    "Have a great day exploring!",
-    "Discover something new today in ZobiView.",
-    "Your daily dose of web tools is here.",
-    "Stay productive and curious!"
   ]
 }
