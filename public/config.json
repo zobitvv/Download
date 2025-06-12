@@ -2,7 +2,7 @@
 {
   "appName": "ZobiView",
   "appLogoUrl": "Zap",
-  "launchMessage": "Welcome to ZobiView! Your portal to many tools.",
+  "launchMessage": "Welcome to ZobiView! Explore a variety of web tools.",
   "contactWhatsApp": "https://wa.me/1234567890",
   "groupWhatsApp": "https://chat.whatsapp.com/yourgroupinvite",
   "facebookProfile": "https://facebook.com/yourprofile",
@@ -12,19 +12,15 @@
     "accentColor": "#8E2DE2",
     "bodyFont": "Josefin Sans",
     "headlineFont": "Space Grotesk",
-    "contentDescription": "A versatile app for accessing various web utilities and information."
+    "contentDescription": "A multi-webview container app with various tools and resources."
   },
-  "dailyMessages": [
-    "Have a great day exploring!",
-    "Discover something new today in ZobiView.",
-    "Tip: Long-press an item for more options (future feature)!",
-    "Stay curious and keep learning."
-  ],
   "webViews": [
     {
       "id": "simtracker",
-      "title": "Sim Tracker",
+      "title": "SIM Tracker",
       "icon": "Smartphone",
+      "thumbnailUrl": "https://placehold.co/300x200.png",
+      "dataAiHint": "sim card",
       "contentUrl": "https://www.simstracker.com/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
@@ -32,61 +28,53 @@
     },
     {
       "id": "mixdata",
-      "title": "Astola Mixdata",
-      "icon": "DatabaseZap",
+      "title": "Mix Data",
+      "icon": "Database",
+      "thumbnailUrl": "https://placehold.co/300x200.png",
+      "dataAiHint": "data server",
       "contentUrl": "https://astola-studio.site/mixdata/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Various data tools."
+      "descriptiveText": "Access mixed data resources."
     },
     {
       "id": "cnicinfo",
-      "title": "CNIC Information",
+      "title": "CNIC Info",
       "icon": "Fingerprint",
+      "thumbnailUrl": "https://placehold.co/300x200.png",
+      "dataAiHint": "id card",
       "contentUrl": "https://live-tracker.com.pk/cnic-information/",
-      "rewardedAdRequired": true,
+      "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "USE VPN if site show error. Access CNIC details."
+      "descriptiveText": "USE VPN if site show error. Find CNIC information."
     },
     {
-      "id": "fullppwhatsapp",
+      "id": "hdwhatsappdp",
       "title": "HD WhatsApp DP",
       "icon": "UserCircle",
+      "thumbnailUrl": "https://placehold.co/300x200.png",
+      "dataAiHint": "profile picture",
       "contentUrl": "https://fullpp-by-bandaheali.onrender.com/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Set WhatsApp profile in HD without quality loss."
+      "descriptiveText": "Set WhatsApp profile in HD, quality will not be lost."
     },
     {
       "id": "designify",
       "title": "Designify",
       "icon": "Wand2",
+      "thumbnailUrl": "https://placehold.co/300x200.png",
+      "dataAiHint": "photo editor",
       "contentUrl": "https://www.designify.com/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Edit your pictures with AI."
-    },
-    {
-      "id": "placeholder1",
-      "title": "Placeholder Tool A",
-      "icon": "Tool",
-      "thumbnailUrl": "https://placehold.co/300x200.png?text=Tool+A",
-      "dataAiHint": "utility tool",
-      "contentUrl": "about:blank#toolA",
-      "rewardedAdRequired": false,
-      "showDescriptiveText": true,
-      "descriptiveText": "A useful placeholder utility."
-    },
-    {
-      "id": "placeholder2",
-      "title": "Placeholder Service B",
-      "icon": "Globe",
-       "thumbnailUrl": "https://placehold.co/300x200.png?text=Service+B",
-      "dataAiHint": "online service",
-      "htmlContent": "<h1>Service B Coming Soon</h1><p>This is HTML content for Service B.</p>",
-      "rewardedAdRequired": true,
-      "showDescriptiveText": true,
-      "descriptiveText": "Details about upcoming Service B."
+      "descriptiveText": "Edit photos with AI."
     }
+  ],
+  "dailyMessages": [
+    "Have a great day exploring!",
+    "Discover something new today in ZobiView.",
+    "Your daily dose of web tools is here.",
+    "Stay productive and curious!"
   ]
 }
