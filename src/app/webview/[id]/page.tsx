@@ -93,6 +93,7 @@ export default function WebViewPage() {
           title={item.title}
           className="w-full h-[60vh] md:h-[70vh] border-0 rounded-md shadow-lg"
           allowFullScreen
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-downloads allow-fullscreen"
         />
       );
     }
