@@ -1,3 +1,4 @@
+
 import type { LucideIcon } from 'lucide-react';
 import fs from 'fs/promises';
 import path from 'path';
@@ -27,6 +28,7 @@ export interface AppConfig {
   facebookProfile: string;
   theme: AppThemeConfig;
   webViews: WebViewItemConfig[];
+  dailyMessages?: string[]; // Added for daily/random messages
 }
 
 // Ensure this runs on the server by not exporting it for client-side use directly if it uses 'fs'
@@ -49,12 +51,13 @@ export async function getConfig(): Promise<AppConfig> {
         primaryColor: "#000000",
         backgroundColor: "#ffffff",
         accentColor: "#ff0000",
-        bodyFont: "Arial",
-        headlineFont: "Arial",
+        bodyFont: "Josefin Sans",
+        headlineFont: "Space Grotesk",
         contentDescription: "Error loading app configuration.",
       },
       webViews: [],
-      launchMessage: "Error: Could not load application configuration. Please check config.json."
+      launchMessage: "Error: Could not load application configuration. Please check config.json.",
+      dailyMessages: ["Welcome back! Hope you have a productive day."]
     };
   }
 }

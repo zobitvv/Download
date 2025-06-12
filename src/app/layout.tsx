@@ -1,9 +1,11 @@
+
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import TopBar from '@/components/layout/top-bar';
 import { getConfig } from '@/lib/config';
 import UpdateNotifier from '@/components/update-notifier';
+import DailyMessageNotifier from '@/components/daily-message-notifier';
 
 
 export const metadata: Metadata = {
@@ -31,6 +33,7 @@ export default async function RootLayout({
           {children}
         </main>
         <UpdateNotifier />
+        <DailyMessageNotifier />
         <Toaster />
       </body>
     </html>
