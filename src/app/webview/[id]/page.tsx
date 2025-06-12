@@ -47,9 +47,32 @@ export default function WebViewPage() {
     }
   }, [id]);
 
+  const renderContent = () => {
+    if (item && item.contentUrl) {
+      return (
+        <iframe
+          src={item.contentUrl}
+          title={item.title} 
+          className="w-full h-full border-0"
+          allowFullScreen
+          sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-downloads allow-fullscreen"
+        />
+      );
+    }
+    if (item && item.htmlContent) {
+      return (
+        <div
+          className="prose dark:prose-invert max-w-none p-4 bg-card font-body h-full overflow-y-auto"
+          dangerouslySetInnerHTML={{ __html: item.htmlContent }}
+        />
+      );
+    }
+    return <div className="flex-1 flex items-center justify-center p-4"><p className="font-body text-center">No content available for this item.</p></div>;
+  };
+
   if (isLoading) {
     return (
-      <div className="flex flex-col flex-grow items-center justify-center p-4">
+      <div className="flex flex-col flex-1 items-center justify-center p-4">
         <Loader2 className="h-12 w-12 animate-spin text-primary" />
         <p className="mt-4 text-lg font-body text-muted-foreground">Loading content...</p>
       </div>
@@ -58,7 +81,7 @@ export default function WebViewPage() {
 
   if (configError) {
     return (
-       <div className="flex flex-col flex-grow items-center justify-center p-4">
+       <div className="flex flex-col flex-1 items-center justify-center p-4">
         <Alert variant="destructive" className="max-w-xl w-full">
           <DynamicIcon name="AlertTriangle" className="h-4 w-4" />
           <AlertTitle className="font-headline">Error</AlertTitle>
@@ -70,7 +93,7 @@ export default function WebViewPage() {
 
   if (!item) {
      return (
-       <div className="flex flex-col flex-grow items-center justify-center p-4">
+       <div className="flex flex-col flex-1 items-center justify-center p-4">
          <Alert variant="destructive" className="max-w-xl w-full">
            <DynamicIcon name="AlertTriangle" className="h-4 w-4" />
           <AlertTitle className="font-headline">Error</AlertTitle>
@@ -80,41 +103,8 @@ export default function WebViewPage() {
     );
   }
 
-  const handleWatchAd = () => {
-    // Simulate watching an ad
-    // In a real app, you'd integrate with AdMob SDK here.
-    // Example: Initialize and show a rewarded ad using a test ID.
-    // Google's official Rewarded Ad test ID (Android): ca-app-pub-3940256099942544/5224354917
-    // Google's official Rewarded Ad test ID (iOS): ca-app-pub-3940256099942544/1712485313
-    // For web, you'd use the Google Mobile Ads SDK for HTML5 or a similar web-based ad solution.
-    setAdWatched(true);
-  };
-
-  const renderContent = () => {
-    if (item.contentUrl) {
-      return (
-        <iframe
-          src={item.contentUrl}
-          title={item.title} 
-          className="w-full h-full border-0"
-          allowFullScreen
-          sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-downloads allow-fullscreen"
-        />
-      );
-    }
-    if (item.htmlContent) {
-      return (
-        <div
-          className="prose dark:prose-invert max-w-none p-4 bg-card font-body h-full overflow-y-auto"
-          dangerouslySetInnerHTML={{ __html: item.htmlContent }}
-        />
-      );
-    }
-    return <div className="flex-grow flex items-center justify-center p-4"><p className="font-body text-center">No content available for this item.</p></div>;
-  };
-
   return (
-    <div className="flex flex-col flex-grow">
+    <div className="flex flex-col flex-1"> {/* Changed to flex-1 */}
       {item.rewardedAdRequired && !adWatched ? (
         <Card className="text-center mb-4 shrink-0 rounded-none border-x-0">
           <CardHeader>
@@ -132,14 +122,14 @@ export default function WebViewPage() {
                 (These are test IDs and will not generate revenue).
               </AlertDescription>
             </Alert>
-            <Button onClick={handleWatchAd} size="lg" className="font-body">
+            <Button onClick={() => setAdWatched(true)} size="lg" className="font-body">
               <DynamicIcon name="PlayCircle" className="mr-2 h-5 w-5" />
               Watch Ad to Continue (Simulated)
             </Button>
           </CardContent>
         </Card>
       ) : (
-        <div className="flex-grow w-full relative">
+        <div className="flex-1 w-full relative"> {/* Changed to flex-1 */}
           {renderContent()}
         </div>
       )}
