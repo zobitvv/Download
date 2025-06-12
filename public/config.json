@@ -1,18 +1,17 @@
-
 {
   "appName": "Zobi Tech",
   "appLogoUrl": "/images/zobi-tech-logo.png",
-  "launchMessage": "Welcome to Zobi Tech! Your portal to useful web tools.",
+  "launchMessage": "Welcome to Zobi Tech! Your portal to useful tools and information.",
   "contactWhatsApp": "https://wa.me/1234567890",
-  "groupWhatsApp": "https://chat.whatsapp.com/groupinvite",
+  "groupWhatsApp": "https://chat.whatsapp.com/groupid",
   "facebookProfile": "https://facebook.com/yourprofile",
   "theme": {
     "primaryColor": "#29ABE2",
     "backgroundColor": "#F0F0F0",
     "accentColor": "#8E2DE2",
-    "bodyFont": "Josefin Sans",
+    "bodyFont": "PT Sans",
     "headlineFont": "Space Grotesk",
-    "contentDescription": "A collection of web-based utilities and information portals."
+    "contentDescription": "A collection of webview utilities and tools."
   },
   "webViews": [
     {
@@ -20,38 +19,38 @@
       "title": "SIM Tracker",
       "icon": "Smartphone",
       "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "sim card",
+      "dataAiHint": "sim person",
       "contentUrl": "https://www.simstracker.com/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Track SIM information and details."
+      "descriptiveText": "Track SIM information."
     },
     {
       "id": "mixdata",
-      "title": "Mix Data Astola",
+      "title": "Mix Data",
       "icon": "Database",
       "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "data mix",
+      "dataAiHint": "data analysis",
       "contentUrl": "https://astola-studio.site/mixdata/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Various data services by Astola Studio."
+      "descriptiveText": "Explore mixed data sets."
     },
     {
       "id": "cnicinfo",
-      "title": "CNIC Information",
-      "icon": "BadgeHelp",
+      "title": "CNIC Info",
+      "icon": "Fingerprint",
       "thumbnailUrl": "https://placehold.co/600x400.png",
       "dataAiHint": "id card",
       "contentUrl": "https://live-tracker.com.pk/cnic-information/",
-      "rewardedAdRequired": true,
+      "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Access CNIC information. USE VPN if site show error."
+      "descriptiveText": "CNIC information. USE VPN if site shows error."
     },
     {
-      "id": "fullhdpp",
+      "id": "fullwhatsappdp",
       "title": "HD WhatsApp DP",
-      "icon": "Smartphone",
+      "icon": "Image",
       "thumbnailUrl": "https://placehold.co/600x400.png",
       "dataAiHint": "profile picture",
       "contentUrl": "https://fullpp-by-bandaheali.onrender.com/",
@@ -62,41 +61,41 @@
     {
       "id": "designify",
       "title": "Designify",
-      "icon": "Wand2",
+      "icon": "PenTool",
       "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "photo editing",
+      "dataAiHint": "photo editor",
       "contentUrl": "https://www.designify.com/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Edit photos with AI-powered tools."
+      "descriptiveText": "Edit your pictures with Designify."
     },
     {
       "id": "placeholder1",
-      "title": "Future Tool 1",
-      "icon": "Settings2",
+      "title": "Sample Tool A",
+      "icon": "Globe",
       "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "abstract tech",
-      "contentUrl": "about:blank#futuretool1",
-      "rewardedAdRequired": false,
+      "dataAiHint": "web utility",
+      "contentUrl": "about:blank?title=Tool+A",
+      "rewardedAdRequired": true,
       "showDescriptiveText": true,
-      "descriptiveText": "A placeholder for an upcoming amazing tool."
+      "descriptiveText": "A useful web utility for various tasks."
     },
     {
       "id": "placeholder2",
-      "title": "Resource Hub",
-      "icon": "Library",
+      "title": "Resource Hub B",
+      "icon": "BookOpen",
       "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "books knowledge",
-      "contentUrl": "about:blank#resourcehub",
-      "rewardedAdRequired": true,
+      "dataAiHint": "information resource",
+      "htmlContent": "<h1>Welcome to Resource Hub B</h1><p>This is locally stored HTML content. You can put <strong>any HTML structure</strong> here.</p><p>Perfect for guides, offline information, or simple tools that don't need an external website.</p>",
+      "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Central hub for various resources and links."
+      "descriptiveText": "Access important information and resources offline."
     }
   ],
   "dailyMessages": [
     "Have a great day with Zobi Tech!",
-    "Explore new tools and stay updated!",
-    "Don't forget to check out our latest additions.",
-    "Productivity starts here. What will you accomplish today?"
+    "Explore new tools and stay updated.",
+    "Your daily dose of tech is here.",
+    "Don't forget to check out our latest additions!"
   ]
 }
