@@ -28,7 +28,6 @@ export default function WebViewPage() {
   const [configError, setConfigError] = useState<string | null>(null);
   const [adWatched, setAdWatched] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [showFullDescription, setShowFullDescription] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -92,8 +91,8 @@ export default function WebViewPage() {
       return (
         <iframe
           src={item.contentUrl}
-          title={item.title}
-          className="w-full h-[60vh] md:h-[70vh] border-0 rounded-md shadow-lg"
+          title={item.title} // Title is still useful for accessibility
+          className="w-full h-full border-0 rounded-md shadow-lg"
           allowFullScreen
           sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-downloads allow-fullscreen"
         />
@@ -102,43 +101,18 @@ export default function WebViewPage() {
     if (item.htmlContent) {
       return (
         <div
-          className="prose dark:prose-invert max-w-none p-4 bg-card rounded-md shadow-lg font-body"
+          className="prose dark:prose-invert max-w-none p-4 bg-card rounded-md shadow-lg font-body h-full overflow-y-auto"
           dangerouslySetInnerHTML={{ __html: item.htmlContent }}
         />
       );
     }
-    return <p className="font-body">No content available for this item.</p>;
+    return <p className="font-body text-center p-4">No content available for this item.</p>;
   };
 
-  const descriptionToShow = item.descriptiveText ? 
-    (showFullDescription ? item.descriptiveText : item.descriptiveText.slice(0, 150) + (item.descriptiveText.length > 150 ? "..." : ""))
-    : "";
-
   return (
-    <div className="space-y-6">
-      <Card>
-        <CardHeader className="pb-2">
-          <div className="flex items-center gap-3">
-            <DynamicIcon name={item.icon} className="h-8 w-8 text-primary" />
-            <CardTitle className="font-headline text-2xl">{item.title}</CardTitle>
-          </div>
-        </CardHeader>
-        {item.showDescriptiveText && item.descriptiveText && (
-          <CardContent className="pt-0">
-            <CardDescription className="font-body text-base whitespace-pre-line">
-              {descriptionToShow}
-            </CardDescription>
-            {item.descriptiveText.length > 150 && (
-                 <Button variant="link" className="p-0 h-auto text-primary font-body" onClick={() => setShowFullDescription(!showFullDescription)}>
-                    {showFullDescription ? "Show less" : "Show more"}
-                </Button>
-            )}
-          </CardContent>
-        )}
-      </Card>
-
+    <div className="flex flex-col h-full">
       {item.rewardedAdRequired && !adWatched ? (
-        <Card className="text-center">
+        <Card className="text-center mb-4 shrink-0">
           <CardHeader>
             <CardTitle className="font-headline">Access Restricted</CardTitle>
           </CardHeader>
@@ -149,8 +123,9 @@ export default function WebViewPage() {
               <AlertTitle className="font-headline text-primary">Rewarded Ad Placeholder</AlertTitle>
               <AlertDescription className="font-body">
                 In a real app, an AdMob rewarded ad would be requested and displayed here.
-                You would use an Ad Unit ID, for example, Google's test ID:
-                <code className="block text-xs bg-gray-100 dark:bg-gray-800 p-1 rounded my-1">ca-app-pub-3940256099942544/5224354917</code>
+                You would use an Ad Unit ID, for example, Google's test ID: 
+                <code className="block text-xs bg-gray-100 dark:bg-gray-800 p-1 rounded my-1">ca-app-pub-3940256099942544/5224354917</code> (Android) or 
+                <code className="block text-xs bg-gray-100 dark:bg-gray-800 p-1 rounded my-1">ca-app-pub-3940256099942544/1712485313</code> (iOS).
                 (This is a test ID and will not generate revenue).
               </AlertDescription>
             </Alert>
@@ -161,10 +136,12 @@ export default function WebViewPage() {
           </CardContent>
         </Card>
       ) : (
-        renderContent()
+        <div className="flex-grow w-full relative">
+          {renderContent()}
+        </div>
       )}
 
-      <div className="mt-8 p-4 bg-muted text-center rounded-md shadow">
+      <div className="mt-auto p-4 bg-muted text-center rounded-md shadow shrink-0">
         <p className="font-body text-sm text-muted-foreground">
           Banner Ad Placeholder
         </p>
@@ -176,4 +153,3 @@ export default function WebViewPage() {
     </div>
   );
 }
-
