@@ -20,10 +20,8 @@ const GridMenuItem: React.FC<GridMenuItemProps> = ({ item }) => {
               src={item.thumbnailUrl}
               alt={item.title || 'Item thumbnail'}
               fill
-              sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
               style={{ objectFit: 'cover' }}
               className="transition-transform duration-300 ease-in-out group-hover:scale-105"
-              data-ai-hint={item.dataAiHint || "placeholder image"}
             />
             {item.rewardedAdRequired && (
               <Badge
@@ -39,8 +37,8 @@ const GridMenuItem: React.FC<GridMenuItemProps> = ({ item }) => {
         <div
           className={`p-3 flex flex-col flex-grow ${
             !(item.thumbnailUrl && item.thumbnailUrl.trim() !== '')
-              ? 'justify-center items-center text-center'
-              : 'justify-end' 
+              ? 'justify-center items-center text-center' // Centered content if no thumbnail
+              : 'justify-end' // Content at bottom if thumbnail exists
           }`}
         >
           <h3
@@ -52,6 +50,7 @@ const GridMenuItem: React.FC<GridMenuItemProps> = ({ item }) => {
             {item.title}
           </h3>
 
+          {/* Fallback display: Icon and descriptive text if no thumbnail */}
           {!(item.thumbnailUrl && item.thumbnailUrl.trim() !== '') && (
             <div className="flex flex-col items-center text-center mt-2">
               <DynamicIcon name={item.icon} className="h-10 w-10 text-muted-foreground mb-2" />
