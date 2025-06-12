@@ -65,7 +65,7 @@ export default function WebViewPage() {
           key={iframeKey}
           src={item.contentUrl}
           title={item.title} 
-          className="block w-full h-full border-0"
+          className="absolute inset-0 w-full h-full border-0" 
           allowFullScreen
           sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-modals allow-downloads allow-fullscreen"
         />
@@ -147,7 +147,7 @@ export default function WebViewPage() {
           </CardContent>
         </Card>
       ) : (
-        <div className="flex-1 w-full min-h-0"> 
+        <div className="relative flex-1 w-full min-h-0"> 
           {renderContent()}
         </div>
       )}
@@ -163,5 +163,4 @@ export default function WebViewPage() {
     </div>
   );
 }
-
     
