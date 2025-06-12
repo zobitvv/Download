@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState } from 'react';
@@ -166,7 +167,7 @@ const AiThemeOptimizer: React.FC<AiThemeOptimizerProps> = ({ initialThemeConfig 
       </Form>
       {optimizationResult && (
         <CardContent className="mt-6 border-t pt-6">
-          <h3 className="text-lg font-headline mb-2">Optimization Suggestions:</h3>
+          <h3 className="text-2xl font-headline mb-2">Optimization Suggestions:</h3>
           <ul className="list-disc list-inside space-y-1 font-body">
             <li>Optimized Body Font Size: <span className="font-semibold">{optimizationResult.optimizedBodyFontSize}</span></li>
             <li>Optimized Headline Font Size: <span className="font-semibold">{optimizationResult.optimizedHeadlineFontSize}</span></li>

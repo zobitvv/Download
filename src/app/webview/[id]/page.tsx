@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from 'react';
@@ -116,7 +117,7 @@ export default function WebViewPage() {
         <CardHeader className="pb-2">
           <div className="flex items-center gap-3">
             <DynamicIcon name={item.icon} className="h-8 w-8 text-primary" />
-            <CardTitle className="font-headline text-3xl">{item.title}</CardTitle>
+            <CardTitle className="font-headline text-2xl">{item.title}</CardTitle>
           </div>
         </CardHeader>
         {item.showDescriptiveText && item.descriptiveText && (

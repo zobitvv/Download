@@ -1,3 +1,4 @@
+
 import { getConfig } from '@/lib/config';
 import GridMenu from '@/components/grid-menu';
 import LaunchMessageModal from '@/components/launch-message-modal';
@@ -12,7 +13,7 @@ export default async function HomePage() {
       <LaunchMessageModal message={config.launchMessage} />
       
       <section>
-        <h1 className="text-3xl font-headline mb-2 text-center text-primary sm:text-4xl">
+        <h1 className="text-2xl font-headline mb-2 text-center text-primary">
           Welcome to {config.appName}
         </h1>
         <p className="text-center text-lg text-muted-foreground font-body mb-8">
