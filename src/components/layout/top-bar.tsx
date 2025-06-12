@@ -1,3 +1,4 @@
+
 'use client';
 
 import Link from 'next/link';
@@ -25,7 +26,7 @@ const TopBar: React.FC<TopBarProps> = ({ appName, contactWhatsApp, groupWhatsApp
           <DynamicIcon name={appLogoIconName} className="h-7 w-7 text-primary" />
           <span className="font-headline text-xl font-bold text-foreground">{appName}</span>
         </Link>
-        <nav className="flex items-center gap-2 sm:gap-3">
+        <nav className="flex items-center gap-1 sm:gap-1">
           <Button variant="ghost" size="icon" asChild aria-label="Admin WhatsApp Contact">
             <Link href={contactWhatsApp} target="_blank" rel="noopener noreferrer">
               <MessageSquare className="h-5 w-5" />
