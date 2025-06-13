@@ -7,7 +7,7 @@ import { type WebViewItemConfig, type AppConfig } from '@/lib/config';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Loader2, XCircle } from 'lucide-react'; // Added XCircle
+import { Loader2, XCircle, Info, ShieldAlert } from 'lucide-react';
 import DynamicIcon from '@/components/dynamic-icon';
 
 // Helper function to fetch config on client side
@@ -19,10 +19,10 @@ async function getClientConfig(): Promise<AppConfig> {
   return res.json();
 }
 
-const INTERSTITIAL_AD_THRESHOLD = 3; // Show ad every 3 webview loads
+const INTERSTITIAL_AD_THRESHOLD = 3; 
 const INTERSTITIAL_AD_LOAD_COUNT_KEY = 'zobiViewWebViewLoadCount';
 const INTERSTITIAL_AD_LAST_SHOWN_TS_KEY = 'zobiViewInterstitialLastShownTimestamp';
-const MIN_INTERVAL_BETWEEN_INTERSTITIALS = 2 * 60 * 1000; // 2 minutes in milliseconds
+const MIN_INTERVAL_BETWEEN_INTERSTITIALS = 2 * 60 * 1000; 
 
 
 export default function WebViewPage() {
@@ -36,20 +36,16 @@ export default function WebViewPage() {
   const [iframeKey, setIframeKey] = useState(0); 
 
   const [showInterstitialAd, setShowInterstitialAd] = useState(false);
-  // This state controls whether the main content fetching logic should proceed.
-  // It's set to true if no interstitial is shown, or after an interstitial is closed.
   const [readyToLoadItemContent, setReadyToLoadItemContent] = useState(false);
 
 
-  // Effect for interstitial ad logic
   useEffect(() => {
     if (id) {
       const now = Date.now();
       const lastShownTimestamp = parseInt(localStorage.getItem(INTERSTITIAL_AD_LAST_SHOWN_TS_KEY) || '0', 10);
 
-      // Check if enough time has passed since the last interstitial
       if (now - lastShownTimestamp < MIN_INTERVAL_BETWEEN_INTERSTITIALS) {
-        setReadyToLoadItemContent(true); // Proceed to load content, too soon for another ad
+        setReadyToLoadItemContent(true); 
         return;
       }
 
@@ -58,27 +54,24 @@ export default function WebViewPage() {
 
       if (currentLoadCount >= INTERSTITIAL_AD_THRESHOLD) {
         setShowInterstitialAd(true);
-        localStorage.setItem(INTERSTITIAL_AD_LOAD_COUNT_KEY, '0'); // Reset count
-        localStorage.setItem(INTERSTITIAL_AD_LAST_SHOWN_TS_KEY, now.toString()); // Record when ad was shown
-        setReadyToLoadItemContent(false); // Content loading waits for ad to close
+        localStorage.setItem(INTERSTITIAL_AD_LOAD_COUNT_KEY, '0'); 
+        localStorage.setItem(INTERSTITIAL_AD_LAST_SHOWN_TS_KEY, now.toString()); 
+        setReadyToLoadItemContent(false); 
       } else {
         localStorage.setItem(INTERSTITIAL_AD_LOAD_COUNT_KEY, currentLoadCount.toString());
-        setReadyToLoadItemContent(true); // No interstitial, proceed to load content
+        setReadyToLoadItemContent(true); 
       }
     } else {
-      // If there's no ID, we are not on a specific webview item page, so allow "content" (which would be an error/empty state)
       setReadyToLoadItemContent(true);
     }
-  }, [id]); // Rerun when the webview item id changes
+  }, [id]); 
 
-  // Effect for loading item configuration (depends on readyToLoadItemContent)
   useEffect(() => {
-    // Only proceed if an ID is present, we are ready to load, and an interstitial isn't currently active
     if (id && readyToLoadItemContent && !showInterstitialAd) {
       setIsLoading(true); 
       setAdWatched(false); 
-      setItem(null); // Reset item state for the new ID
-      setConfigError(null); // Reset error state
+      setItem(null); 
+      setConfigError(null); 
 
       getClientConfig().then(config => {
         const foundItem = config.webViews.find(wv => wv.id === id);
@@ -98,7 +91,6 @@ export default function WebViewPage() {
         setIframeKey(prevKey => prevKey + 1); 
       });
     } else if (!id && readyToLoadItemContent) {
-      // Handle cases where ID might be missing but we are "ready" (e.g. invalid route)
       setIsLoading(false);
       setConfigError("No content ID specified.");
     }
@@ -110,7 +102,7 @@ export default function WebViewPage() {
 
   const handleCloseInterstitialAd = () => {
     setShowInterstitialAd(false);
-    setReadyToLoadItemContent(true); // Signal that item content loading can now proceed
+    setReadyToLoadItemContent(true); 
   };
 
   const renderContent = () => {
@@ -141,7 +133,6 @@ export default function WebViewPage() {
     );
   };
 
-  // Interstitial Ad Display (takes precedence if active)
   if (showInterstitialAd) {
     return (
       <div className="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-black/80 p-4 backdrop-blur-sm">
@@ -162,14 +153,13 @@ export default function WebViewPage() {
             </Button>
           </CardContent>
           <CardFooter>
-            <p className="text-xs text-muted-foreground/80 w-full text-center">Ad placeholder for ZobiView</p>
+            <p className="text-xs text-muted-foreground/80 w-full text-center">Ad placeholder for Zobi Tech</p>
           </CardFooter>
         </Card>
       </div>
     );
   }
   
-  // Loading state: either initial, or after interstitial logic before content is ready, or during item fetching
   if (isLoading || (!readyToLoadItemContent && !showInterstitialAd)) {
     return (
       <div className="flex flex-col flex-1 items-center justify-center p-4 bg-background">
@@ -207,6 +197,16 @@ export default function WebViewPage() {
 
   return (
     <div className="flex flex-col flex-1 bg-background">
+      {item.itemSpecificLaunchMessage && (
+        <Alert variant="default" className="rounded-none border-x-0 border-t-0 bg-accent/10 text-accent-foreground dark:bg-accent/20">
+          <ShieldAlert className="h-5 w-5 text-accent" />
+          <AlertTitle className="font-headline text-accent">Important Notice</AlertTitle>
+          <AlertDescription className="font-body">
+            {item.itemSpecificLaunchMessage}
+          </AlertDescription>
+        </Alert>
+      )}
+
       {showAdExperience ? (
         <Card className="text-center shrink-0 rounded-none border-x-0 border-b">
           <CardHeader>
@@ -246,4 +246,3 @@ export default function WebViewPage() {
     </div>
   );
 }
-    

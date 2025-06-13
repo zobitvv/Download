@@ -15,6 +15,7 @@ export interface WebViewItemConfig {
   rewardedAdRequired: boolean;
   showDescriptiveText: boolean;
   descriptiveText?: string;
+  itemSpecificLaunchMessage?: string; // For messages on webview page load
 }
 
 export interface AppThemeConfig extends OptimizeThemeInput {}
@@ -42,8 +43,8 @@ export async function getConfig(): Promise<AppConfig> {
     console.error("Failed to load or parse config.json:", error);
     // Fallback to a default minimal config to prevent full app crash
     return {
-      appName: "ZobiView (Error)",
-      appLogoUrl: "AlertTriangle",
+      appName: "Zobi Tech (Error)",
+      appLogoUrl: "AlertTriangle", // Fallback icon
       contactWhatsApp: "#",
       groupWhatsApp: "#",
       facebookProfile: "#",
@@ -51,7 +52,7 @@ export async function getConfig(): Promise<AppConfig> {
         primaryColor: "#000000",
         backgroundColor: "#ffffff",
         accentColor: "#ff0000",
-        bodyFont: "Josefin Sans",
+        bodyFont: "PT Sans",
         headlineFont: "Space Grotesk",
         contentDescription: "Error loading app configuration.",
       },

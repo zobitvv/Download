@@ -1,103 +1,92 @@
 
 {
   "appName": "Zobi Tech",
-  "appLogoUrl": "https://i.ibb.co/KxqfCKg/Zobi-Tech-Logo.png",
-  "launchMessage": "Welcome to Zobi Tech! Your personalized hub for web utilities.",
-  "contactWhatsApp": "https://wa.me/1234567890",
-  "groupWhatsApp": "https://chat.whatsapp.com/groupinvite",
-  "facebookProfile": "https://facebook.com/yourprofile",
+  "appLogoUrl": "https://i.ibb.co/1Ygt4zfZ/1292611-ico.png",
+  "launchMessage": "Welcome to Zobi Tech! Your portal to useful web tools.",
+  "contactWhatsApp": "https://wa.me/923318555417",
+  "groupWhatsApp": "https://chat.whatsapp.com/KZ0ap5suSxD4aRolhmWaDa",
+  "facebookProfile": "https://www.facebook.com/zobitech/",
   "theme": {
     "primaryColor": "#29ABE2",
     "backgroundColor": "#F0F0F0",
     "accentColor": "#8E2DE2",
     "bodyFont": "PT Sans",
     "headlineFont": "Space Grotesk",
-    "contentDescription": "A collection of webview utilities and tools."
+    "contentDescription": "A collection of webview utilities and tools, presented in a clean and modern interface."
   },
   "webViews": [
     {
       "id": "simtracker",
       "title": "SIM Tracker",
       "icon": "Smartphone",
-      "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "sim card",
+      "thumbnailUrl": "https://i.ibb.co/0VF9GDxk/fingerprint.png",
+      "dataAiHint": "sim card phone",
       "contentUrl": "https://www.simstracker.com/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Track SIM information and details."
+      "descriptiveText": "Track SIM card information."
     },
     {
       "id": "mixdata",
-      "title": "Mix Data",
+      "title": "MIX Data",
       "icon": "Database",
-      "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "data mix",
+      "thumbnailUrl": "https://i.ibb.co/0VF9GDxk/fingerprint.png",
+      "dataAiHint": "data connection",
       "contentUrl": "https://astola-studio.site/mixdata/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Access mixed data utilities."
+      "descriptiveText": "Access mixed data services."
     },
     {
       "id": "cnicinfo",
       "title": "CNIC Info",
-      "icon": "BadgeHelp",
-      "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "id card",
+      "icon": "Fingerprint",
+      "thumbnailUrl": "https://i.ibb.co/xpPjHkx/id-card-line-black-icon-png-309153-removebg-preview.png",
+      "dataAiHint": "id card pakistan",
       "contentUrl": "https://live-tracker.com.pk/cnic-information/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "USE VPN if site shows error."
+      "descriptiveText": "Get CNIC information. USE VPN if site shows error.",
+      "itemSpecificLaunchMessage": "USE VPN if site shows error or does not load correctly."
     },
     {
-      "id": "whatsappdp",
-      "title": "HD WhatsApp DP",
-      "icon": "MessageSquare",
-      "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "profile picture",
+      "id": "fullpp",
+      "title": "Whatsapp Full DP",
+      "icon": "UserCircle",
+      "thumbnailUrl": "https://i.ibb.co/GvrxcLGJ/unnamed.jpg",
+      "dataAiHint": "profile picture whatsapp",
       "contentUrl": "https://fullpp-by-bandaheali.onrender.com/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Set WhatsApp profile in HD, quality will not be lost."
-    },
-    {
-      "id": "designify",
-      "title": "Designify",
-      "icon": "Wand2",
-      "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "photo editing",
-      "contentUrl": "https://www.designify.com/",
-      "rewardedAdRequired": false,
-      "showDescriptiveText": true,
-      "descriptiveText": "Edit your pictures with powerful tools."
+      "descriptiveText": "Set WhatsApp profile picture in HD without quality loss."
     },
     {
       "id": "placeholder1",
-      "title": "Placeholder Item 1",
-      "icon": "HelpCircle",
+      "title": "Sample Web Page",
+      "icon": "Globe",
       "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "abstract placeholder",
-      "htmlContent": "<h1>Hello from Placeholder 1</h1><p>This is HTML content.</p>",
-      "rewardedAdRequired": true,
+      "dataAiHint": "web page",
+      "contentUrl": "https://example.com",
+      "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "A sample item with HTML content and ad requirement."
+      "descriptiveText": "A sample webpage."
     },
     {
       "id": "placeholder2",
-      "title": "Placeholder Item 2",
-      "icon": "Settings2",
+      "title": "Local HTML Content",
+      "icon": "FileText",
       "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "tech gear",
-      "contentUrl": "https://example.com/another-tool",
-      "rewardedAdRequired": false,
-      "showDescriptiveText": true,
-      "descriptiveText": "Another useful tool, coming soon!"
+      "dataAiHint": "document text",
+      "htmlContent": "<h1>Hello from Local HTML</h1><p>This is content rendered directly from the config.</p><button onclick='alert(\"Clicked!\")'>Click Me</button>",
+      "rewardedAdRequired": true,
+      "showDescriptiveText": false
     }
   ],
   "dailyMessages": [
     "Have a great day with Zobi Tech!",
-    "Explore new tools and utilities today.",
-    "Did you know? You can customize your experience.",
-    "Stay productive and informed!",
-    "Your daily dose of tech is here."
+    "Explore new tools and features.",
+    "Stay connected, stay informed.",
+    "Your daily dose of web utilities.",
+    "Don't forget to check out our latest additions!"
   ]
 }
