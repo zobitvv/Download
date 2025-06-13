@@ -12,7 +12,7 @@ export interface WebViewItemConfig {
   dataAiHint?: string;
   contentUrl?: string;
   htmlContent?: string;
-  rewardedAdRequired: boolean;
+  // rewardedAdRequired: boolean; // Removed
   showDescriptiveText: boolean;
   descriptiveText?: string;
   itemSpecificLaunchMessage?: string; // For messages on webview page load

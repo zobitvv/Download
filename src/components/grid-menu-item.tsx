@@ -23,14 +23,7 @@ const GridMenuItem: React.FC<GridMenuItemProps> = ({ item }) => {
               style={{ objectFit: 'cover' }}
               className="transition-transform duration-300 ease-in-out group-hover:scale-105"
             />
-            {item.rewardedAdRequired && (
-              <Badge
-                variant="secondary"
-                className="absolute top-2 right-2 text-xs px-1.5 py-0.5 opacity-90 group-hover:opacity-100 shadow-sm pointer-events-none"
-              >
-                Ad
-              </Badge>
-            )}
+            {/* Removed Ad Badge */}
           </div>
         ) : null}
 

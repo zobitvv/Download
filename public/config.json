@@ -2,7 +2,7 @@
 {
   "appName": "Zobi Tech",
   "appLogoUrl": "https://i.ibb.co/1Ygt4zfZ/1292611-ico.png",
-  "launchMessage": "Welcome to Zobi Tech! Your all-in-one utility app. USE VPN IF ANY SITE SHOWS ERROR.",
+  "launchMessage": "Welcome to Zobi Tech! Your all-in-one utility app.",
   "contactWhatsApp": "https://wa.me/923318555417",
   "groupWhatsApp": "https://chat.whatsapp.com/KZ0ap5suSxD4aRolhmWaDa",
   "facebookProfile": "https://www.facebook.com/zobitech/",
@@ -12,42 +12,39 @@
     "accentColor": "#8E2DE2",
     "bodyFont": "Josefin Sans",
     "headlineFont": "Space Grotesk",
-    "contentDescription": "A versatile app offering various web-based utilities and information services."
+    "contentDescription": "An app providing various web utilities and tools."
   },
   "webViews": [
     {
       "id": "simtracker",
-      "title": "SIM TRACKER",
+      "title": "SIM Tracker",
       "icon": "Smartphone",
       "thumbnailUrl": "https://image.winudf.com/v2/image1/Y29tLm51bWJlcmZpbmRlci5wYWtfc2ltX2RhdGFiYXNlLm5hZHJhZmluZGVyLmNuaWNfaWNvbl8xNjkwODcwNDQ3XzA1Mw/icon.webp?w=280&fakeurl=1&type=.webp",
-      "dataAiHint": "sim card network",
+      "dataAiHint": "network signal",
       "contentUrl": "https://www.simstracker.com/",
-      "rewardedAdRequired": false,
       "showDescriptiveText": true,
       "descriptiveText": "Track SIM card information and details."
     },
     {
       "id": "mixdata",
       "title": "MIX DATA",
-      "icon": "Fingerprint",
+      "icon": "Database",
       "thumbnailUrl": "https://image.winudf.com/v2/image1/Y29tLm51bWJlcmZpbmRlci5wYWtfc2ltX2RhdGFiYXNlLm5hZHJhZmluZGVyLmNuaWNfaWNvbl8xNjkwODcwNDQ3XzA1Mw/icon.webp?w=280&fakeurl=1&type=.webp",
-      "dataAiHint": "data privacy",
+      "dataAiHint": "data connection",
       "contentUrl": "https://simownership.com/search/",
-      "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Access various data points and records."
+      "descriptiveText": "Access various mixed data services."
     },
     {
       "id": "cnicinfo",
       "title": "CNIC Info",
-      "icon": "BadgeInfo",
+      "icon": "Fingerprint",
       "thumbnailUrl": "https://i.ibb.co/xpPjHkx/id-card-line-black-icon-png-309153-removebg-preview.png",
       "dataAiHint": "id card",
-      "contentUrl": "https://simdatabase.net/",
-      "rewardedAdRequired": false,
+      "contentUrl": "https://cnic.sims.pk/",
       "showDescriptiveText": true,
       "descriptiveText": "Get information related to CNIC.",
-      "itemSpecificLaunchMessage": "USE VPN if site shows error or doesn't load."
+      "itemSpecificLaunchMessage": "USE VPN if site show error"
     },
     {
       "id": "whatsappdp",
@@ -56,27 +53,26 @@
       "thumbnailUrl": "https://i.ibb.co/GvrxcLGJ/unnamed.jpg",
       "dataAiHint": "profile picture",
       "contentUrl": "https://fullpp-by-bandaheali.onrender.com/",
-      "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "View full WhatsApp display pictures."
+      "descriptiveText": "View and manage WhatsApp display pictures."
     },
     {
       "id": "electricbill",
       "title": "CHECK electric bill",
-      "icon": "Bolt",
+      "icon": "FileText",
       "thumbnailUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUk8WbIei2HIcB2KBNq4-OW3vJVp3k_napyTNhzVuDCUyPjeZHvSydDdVjP6UY4yPEFRI&usqp=CAU",
-      "dataAiHint": "electricity bill",
+      "dataAiHint": "invoice electricity",
       "contentUrl": "https://pakbills.com/",
-      "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Check your electricity bill online."
+      "descriptiveText": "Check your electricity bill online.",
+      "itemSpecificLaunchMessage": "If the site doesn't load, it might have restrictions on being embedded. Try opening it directly in a browser."
     }
   ],
   "dailyMessages": [
     "Tip of the day: Stay hydrated and take short breaks!",
-    "Remember to check for app updates for the latest features.",
-    "Did you know? You can share this app with your friends!",
-    "Have a great day using Zobi Tech utilities!",
-    "Your feedback helps us improve. Contact us with suggestions!"
+    "Remember to check out our new features!",
+    "Have a great day using Zobi Tech!",
+    "Don't forget to share Zobi Tech with your friends!",
+    "Your feedback is important to us. Let us know what you think!"
   ]
 }
