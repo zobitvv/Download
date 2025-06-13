@@ -1,7 +1,8 @@
+
 {
   "appName": "Zobi Tech",
   "appLogoUrl": "https://i.ibb.co/1Ygt4zfZ/1292611-ico.png",
-  "launchMessage": "Welcome to Zobi Tech! Your all-in-one utility app.",
+  "launchMessage": "Welcome to Zobi Tech! Your all-in-one utility application.",
   "contactWhatsApp": "https://wa.me/923318555417",
   "groupWhatsApp": "https://chat.whatsapp.com/KZ0ap5suSxD4aRolhmWaDa",
   "facebookProfile": "https://www.facebook.com/zobitech/",
@@ -11,14 +12,14 @@
     "accentColor": "#8E2DE2",
     "bodyFont": "Josefin Sans",
     "headlineFont": "Space Grotesk",
-    "contentDescription": "An app that provides various web-based utilities and information services through WebViews."
+    "contentDescription": "A collection of useful web utilities and tools for daily tasks."
   },
   "dailyMessages": [
-    "Tip of the day: Stay hydrated!",
-    "Don't forget to smile today!",
-    "Did you know? Zobi Tech is constantly improving.",
-    "Have a great day exploring our tools!",
-    "Keep learning, keep growing!"
+    "Tip: Keep your apps updated for the latest features and security!",
+    "Don't forget to take a break and stretch if you've been sitting for a while.",
+    "Explore a new tool today and see how it can help you!",
+    "Stay curious and keep learning!",
+    "Have a great day with Zobi Tech!"
   ],
   "webViews": [
     {
@@ -26,42 +27,42 @@
       "title": "SIM Tracker",
       "icon": "Smartphone",
       "thumbnailUrl": "https://image.winudf.com/v2/image1/Y29tLm51bWJlcmZpbmRlci5wYWtfc2ltX2RhdGFiYXNlLm5hZHJhZmluZGVyLmNuaWNfaWNvbl8xNjkwODcwNDQ3XzA1Mw/icon.webp?w=280&fakeurl=1&type=.webp",
-      "dataAiHint": "sim card track",
-      "contentUrl": "https://siminfo.org/live-tracker-2024/",
+      "dataAiHint": "database search",
+      "contentUrl": "https://simdatabase.net/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Track SIM card information."
+      "descriptiveText": "Track SIM card information and details."
+    },
+    {
+      "id": "mixdata",
+      "title": "MIX DATA",
+      "icon": "Layers",
+      "thumbnailUrl": "https://image.winudf.com/v2/image1/Y29tLm51bWJlcmZpbmRlci5wYWtfc2ltX2RhdGFiYXNlLm5hZHJhZmluZGVyLmNuaWNfaWNvbl8xNjkwODcwNDQ3XzA1Mw/icon.webp?w=280&fakeurl=1&type=.webp",
+      "dataAiHint": "data collection",
+      "contentUrl": "https://simownership.com/search/",
+      "rewardedAdRequired": false,
+      "showDescriptiveText": true,
+      "descriptiveText": "Access a variety of mixed data services."
     },
     {
       "id": "cnicinfo",
       "title": "CNIC Info",
       "icon": "Fingerprint",
       "thumbnailUrl": "https://i.ibb.co/xpPjHkx/id-card-line-black-icon-png-309153-removebg-preview.png",
-      "dataAiHint": "id card",
-      "contentUrl": "https://siminfo.org/nadra-id-card-information/",
-      "rewardedAdRequired": false,
+      "dataAiHint": "identification card",
+      "contentUrl": "https://cnic.simsowner.com/",
+      "rewardedAdRequired": true,
       "showDescriptiveText": true,
       "descriptiveText": "Get information related to CNIC.",
-      "itemSpecificLaunchMessage": "USE VPN if site shows error or doesn't load."
-    },
-    {
-      "id": "mixdata",
-      "title": "MIX Data",
-      "icon": "Database",
-      "thumbnailUrl": "https://image.winudf.com/v2/image1/Y29tLm51bWJlcmZpbmRlci5wYWtfc2ltX2RhdGFiYXNlLm5hZHJhZmluZGVyLmNuaWNfaWNvbl8xNjkwODcwNDQ3XzA1Mw/icon.webp?w=280&fakeurl=1&type=.webp",
-      "dataAiHint": "data collection",
-      "contentUrl": "https://siminfo.org/sim-owner-details-2024/",
-      "rewardedAdRequired": false,
-      "showDescriptiveText": true,
-      "descriptiveText": "Access mixed data sources."
+      "itemSpecificLaunchMessage": "USE VPN if site show error"
     },
     {
       "id": "whatsappdp",
       "title": "Whatsapp Full DP",
       "icon": "UserCircle",
       "thumbnailUrl": "https://i.ibb.co/GvrxcLGJ/unnamed.jpg",
-      "dataAiHint": "profile picture",
-      "contentUrl": "https://pictools.net/image-resizer-for-whatsapp-dp",
+      "dataAiHint": "profile picture social",
+      "contentUrl": "https://statussave.org/full-dp-viewer/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
       "descriptiveText": "View full WhatsApp display pictures."
@@ -69,14 +70,14 @@
     {
       "id": "electricbill",
       "title": "CHECK electric bill",
-      "icon": "Zap",
+      "icon": "FileText",
       "thumbnailUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUk8WbIei2HIcB2KBNq4-OW3vJVp3k_napyTNhzVuDCUyPjeZHvSydDdVjP6UY4yPEFRI&usqp=CAU",
-      "dataAiHint": "electricity bill",
+      "dataAiHint": "invoice document",
       "contentUrl": "https://pakbills.com/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
       "descriptiveText": "Check your electricity bill online.",
-      "itemSpecificLaunchMessage": "Note: If the bill checking site doesn't load, it might be due to its own settings or network issues. Try accessing it directly in a browser if needed."
+      "itemSpecificLaunchMessage": ""
     }
   ]
 }
