@@ -2,8 +2,8 @@
 {
   "appName": "Zobi Tech",
   "appLogoUrl": "https://i.ibb.co/1Ygt4zfZ/1292611-ico.png",
-  "launchMessage": "Welcome to Zobi Tech! Your portal to useful web tools.",
-  "contactWhatsApp": "https://wa.me/923318555417",
+  "launchMessage": "Welcome to Zobi Tech! Your all-in-one utility app.",
+  "contactWhatsApp": "https://wa.me/+923318555417",
   "groupWhatsApp": "https://chat.whatsapp.com/KZ0ap5suSxD4aRolhmWaDa",
   "facebookProfile": "https://www.facebook.com/zobitech/",
   "theme": {
@@ -12,81 +12,59 @@
     "accentColor": "#8E2DE2",
     "bodyFont": "PT Sans",
     "headlineFont": "Space Grotesk",
-    "contentDescription": "A collection of webview utilities and tools, presented in a clean and modern interface."
+    "contentDescription": "A versatile app offering various web-based tools and utilities."
   },
   "webViews": [
     {
       "id": "simtracker",
       "title": "SIM Tracker",
       "icon": "Smartphone",
-      "thumbnailUrl": "https://i.ibb.co/0VF9GDxk/fingerprint.png",
-      "dataAiHint": "sim card phone",
+      "thumbnailUrl": "https://image.winudf.com/v2/image1/Y29tLm51bWJlcmZpbmRlci5wYWtfc2ltX2RhdGFiYXNlLm5hZHJhZmluZGVyLmNuaWNfaWNvbl8xNjkwODcwNDQ3XzA1Mw/icon.webp?w=280&fakeurl=1&type=.webp",
+      "dataAiHint": "sim data",
       "contentUrl": "https://www.simstracker.com/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Track SIM card information."
+      "descriptiveText": "Track SIM card information and details."
     },
     {
       "id": "mixdata",
-      "title": "MIX Data",
+      "title": "Mix Data Finder",
       "icon": "Database",
-      "thumbnailUrl": "https://i.ibb.co/0VF9GDxk/fingerprint.png",
-      "dataAiHint": "data connection",
+      "thumbnailUrl": "https://image.winudf.com/v2/image1/Y29tLm51bWJlcmZpbmRlci5wYWtfc2ltX2RhdGFiYXNlLm5hZHJhZmluZGVyLmNuaWNfaWNvbl8xNjkwODcwNDQ3XzA1Mw/icon.webp?w=280&fakeurl=1&type=.webp",
+      "dataAiHint": "database search",
       "contentUrl": "https://astola-studio.site/mixdata/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Access mixed data services."
+      "descriptiveText": "Find various types of data and information."
     },
     {
       "id": "cnicinfo",
-      "title": "CNIC Info",
+      "title": "CNIC Information",
       "icon": "Fingerprint",
       "thumbnailUrl": "https://i.ibb.co/xpPjHkx/id-card-line-black-icon-png-309153-removebg-preview.png",
-      "dataAiHint": "id card pakistan",
+      "dataAiHint": "id card",
       "contentUrl": "https://live-tracker.com.pk/cnic-information/",
-      "rewardedAdRequired": false,
+      "rewardedAdRequired": true,
       "showDescriptiveText": true,
-      "descriptiveText": "Get CNIC information. USE VPN if site shows error.",
-      "itemSpecificLaunchMessage": "USE VPN if site shows error or does not load correctly."
+      "descriptiveText": "Access CNIC information. Make sure to use VPN if site shows an error.",
+      "itemSpecificLaunchMessage": "USE VPN if this site shows an error or doesn't load."
     },
     {
-      "id": "fullpp",
+      "id": "whatsappdp",
       "title": "Whatsapp Full DP",
       "icon": "UserCircle",
       "thumbnailUrl": "https://i.ibb.co/GvrxcLGJ/unnamed.jpg",
-      "dataAiHint": "profile picture whatsapp",
+      "dataAiHint": "profile picture",
       "contentUrl": "https://fullpp-by-bandaheali.onrender.com/",
       "rewardedAdRequired": false,
       "showDescriptiveText": true,
-      "descriptiveText": "Set WhatsApp profile picture in HD without quality loss."
-    },
-    {
-      "id": "placeholder1",
-      "title": "Sample Web Page",
-      "icon": "Globe",
-      "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "web page",
-      "contentUrl": "https://example.com",
-      "rewardedAdRequired": false,
-      "showDescriptiveText": true,
-      "descriptiveText": "A sample webpage."
-    },
-    {
-      "id": "placeholder2",
-      "title": "Local HTML Content",
-      "icon": "FileText",
-      "thumbnailUrl": "https://placehold.co/600x400.png",
-      "dataAiHint": "document text",
-      "htmlContent": "<h1>Hello from Local HTML</h1><p>This is content rendered directly from the config.</p><button onclick='alert(\"Clicked!\")'>Click Me</button>",
-      "rewardedAdRequired": true,
-      "showDescriptiveText": false
+      "descriptiveText": "Set your WhatsApp profile picture in HD without quality loss."
     }
   ],
   "dailyMessages": [
-    "Have a great day with Zobi Tech!",
-    "Explore new tools and features.",
-    "Stay connected, stay informed.",
-    "Your daily dose of web utilities.",
-    "Don't forget to check out our latest additions!"
+    "Tip of the day: Stay curious and keep exploring!",
+    "Remember to take a short break and stretch.",
+    "New features might be around the corner, stay tuned!",
+    "Have a productive day with Zobi Tech!"
   ]
 }
