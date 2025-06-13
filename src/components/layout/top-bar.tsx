@@ -27,7 +27,6 @@ export default function TopBar({ appName, appLogoUrl, contactWhatsApp, groupWhat
               width={36}
               height={36}
               className="h-9 w-9 object-contain"
-              priority // Add priority if it's LCP, otherwise remove if not critical
             />
           ) : (
             <DynamicIcon name="LayoutPanelLeft" className="h-7 w-7 text-primary" />
@@ -61,7 +60,13 @@ export default function TopBar({ appName, appLogoUrl, contactWhatsApp, groupWhat
                 url: window.location.origin,
               }).catch(console.error);
             } else {
-              alert('Sharing is not supported on this browser. You can copy the URL.');
+              // Fallback for browsers that don't support navigator.share
+              try {
+                navigator.clipboard.writeText(window.location.origin);
+                alert('App link copied to clipboard!');
+              } catch (err) {
+                alert('Sharing is not supported on this browser. You can copy the URL manually.');
+              }
             }
           }}>
             <Share2 className="h-5 w-5" />
