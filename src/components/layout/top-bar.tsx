@@ -22,13 +22,13 @@ export default function TopBar({ appName, appLogoUrl, contactWhatsApp, groupWhat
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
           {isLogoUrl ? (
-            <div className="h-9 w-9 relative rounded-lg overflow-hidden flex items-center justify-center bg-white">
+            <div className="h-9 w-9 relative rounded-lg overflow-hidden flex items-center justify-center">
               <Image
                 src={appLogoUrl}
                 alt={`${appName} logo`}
                 width={36}
                 height={36}
-                className="h-full w-full object-contain p-0.5"
+                className="h-full w-full object-contain"
               />
             </div>
           ) : (

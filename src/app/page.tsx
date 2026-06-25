@@ -17,16 +17,16 @@ export default async function HomePage() {
           <div className="mb-8 relative">
             <div className="absolute -inset-4 bg-primary/20 rounded-full blur-2xl animate-pulse"></div>
             {isLogoUrl ? (
-              <div className="relative h-32 w-32 md:h-40 md:w-40 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white flex items-center justify-center">
+              <div className="relative h-32 w-32 md:h-40 md:w-40 rounded-3xl overflow-hidden flex items-center justify-center">
                 <Image 
                   src={config.appLogoUrl} 
                   alt={`${config.appName} Logo`} 
                   fill 
-                  className="object-contain p-2"
+                  className="object-contain"
                 />
               </div>
             ) : (
-              <div className="relative h-32 w-32 md:h-40 md:w-40 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white flex items-center justify-center">
+              <div className="relative h-32 w-32 md:h-40 md:w-40 rounded-3xl overflow-hidden flex items-center justify-center">
                 <DynamicIcon name={config.appLogoUrl || "Globe"} className="h-20 w-20 text-primary" />
               </div>
             )}
