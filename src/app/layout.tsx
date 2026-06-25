@@ -93,7 +93,7 @@ export default async function RootLayout({
     "name": config.appName,
     "operatingSystem": "Android",
     "applicationCategory": "UtilitiesApplication",
-    "downloadUrl": "https://raw.githubusercontent.com/zobitvv/Download/main/src/app/ZobiTech.apk",
+    "downloadUrl": "https://raw.githubusercontent.com/zobitvv/p2/main/ZobiTech.apk",
     "featureList": [
       "SIM Tracker Pakistan",
       "CNIC Information Check",
