@@ -1,11 +1,10 @@
-
 'use client';
 
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import DynamicIcon from '@/components/dynamic-icon';
-import { Share2, Bell, MessageSquare, Facebook, Users, LayoutPanelLeft } from 'lucide-react';
+import { Share2, Bell, MessageSquare, Facebook, Users } from 'lucide-react';
 
 interface TopBarProps {
   appName: string;
@@ -16,20 +15,24 @@ interface TopBarProps {
 }
 
 export default function TopBar({ appName, appLogoUrl, contactWhatsApp, groupWhatsApp, facebookProfile }: TopBarProps): JSX.Element {
+  const isLogoUrl = appLogoUrl?.startsWith('/') || appLogoUrl?.startsWith('http');
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          {appLogoUrl ? (
-            <Image
-              src={appLogoUrl}
-              alt={`${appName} logo`}
-              width={36}
-              height={36}
-              className="h-9 w-9 object-contain"
-            />
+          {isLogoUrl ? (
+            <div className="h-9 w-9 relative rounded-lg overflow-hidden flex items-center justify-center bg-white">
+              <Image
+                src={appLogoUrl}
+                alt={`${appName} logo`}
+                width={36}
+                height={36}
+                className="h-full w-full object-contain p-0.5"
+              />
+            </div>
           ) : (
-            <DynamicIcon name="LayoutPanelLeft" className="h-7 w-7 text-primary" />
+            <DynamicIcon name={appLogoUrl || "LayoutPanelLeft"} className="h-7 w-7 text-primary" />
           )}
           <span className="font-headline text-xl font-bold text-foreground">{appName}</span>
         </Link>
@@ -53,19 +56,18 @@ export default function TopBar({ appName, appLogoUrl, contactWhatsApp, groupWhat
             </Link>
           </Button>
           <Button variant="ghost" size="icon" aria-label="Share App" onClick={() => {
-            if (navigator.share) {
+            if (typeof navigator !== 'undefined' && navigator.share) {
               navigator.share({
                 title: appName,
                 text: `Check out ${appName}!`,
                 url: window.location.origin,
               }).catch(console.error);
             } else {
-              // Fallback for browsers that don't support navigator.share
               try {
                 navigator.clipboard.writeText(window.location.origin);
                 alert('App link copied to clipboard!');
               } catch (err) {
-                alert('Sharing is not supported on this browser. You can copy the URL manually.');
+                alert('Sharing is not supported on this browser.');
               }
             }
           }}>

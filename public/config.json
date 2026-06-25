@@ -1,22 +1,22 @@
 {
   "appName": "Zobi Tech",
   "appLogoUrl": "/icon.webp",
-  "launchMessage": "Welcome to Zobi Tech Pakistan! Your trusted digital companion.",
+  "launchMessage": "Welcome to Zobi Tech - Your digital companion for Pakistan. Enjoy fast, secure, and free access to essential services.",
   "contactWhatsApp": "https://wa.me/923409835287",
-  "groupWhatsApp": "https://chat.whatsapp.com/G5ZpX5p6p7z0X5p6p7z0X5",
-  "facebookProfile": "https://www.facebook.com/profile.php?id=61563821734208",
+  "groupWhatsApp": "https://chat.whatsapp.com/L1r6L7k1C9C5L7k1C9C5L7",
+  "facebookProfile": "https://www.facebook.com/profile.php?id=100064115160868",
   "theme": {
     "primaryColor": "#29ABE2",
     "backgroundColor": "#F0F0F0",
     "accentColor": "#8E2DE2",
     "bodyFont": "Josefin Sans",
     "headlineFont": "Space Grotesk",
-    "contentDescription": "A Multi-WebView Container App for Pakistani utility services."
+    "contentDescription": "A professional utility app for Pakistani citizens."
   },
   "webViews": [],
   "dailyMessages": [
-    "Stay connected with Zobi Tech!",
-    "Check your bills and more with just one click.",
-    "Zobi Tech: Fast, Secure, and Free."
+    "Stay safe and connected with Zobi Tech.",
+    "Did you know you can check your bills instantly here?",
+    "Your privacy is our top priority."
   ]
 }

@@ -1,12 +1,13 @@
-
 import { getConfig } from '@/lib/config';
 import { Button } from '@/components/ui/button';
 import { Download, ShieldCheck, Zap, Globe, MessageSquare, Facebook, Users, Smartphone } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
+import DynamicIcon from '@/components/dynamic-icon';
 
 export default async function HomePage() {
   const config = await getConfig();
+  const isLogoUrl = config.appLogoUrl?.startsWith('/') || config.appLogoUrl?.startsWith('http');
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-background text-foreground">
@@ -15,17 +16,19 @@ export default async function HomePage() {
         <div className="container px-4 md:px-6 flex flex-col items-center text-center">
           <div className="mb-8 relative">
             <div className="absolute -inset-4 bg-primary/20 rounded-full blur-2xl animate-pulse"></div>
-            {config.appLogoUrl ? (
-              <div className="relative h-32 w-32 md:h-40 md:w-40 rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+            {isLogoUrl ? (
+              <div className="relative h-32 w-32 md:h-40 md:w-40 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white flex items-center justify-center">
                 <Image 
                   src={config.appLogoUrl} 
-                  alt="Zobi Tech Logo" 
+                  alt={`${config.appName} Logo`} 
                   fill 
-                  className="object-contain bg-white p-2"
+                  className="object-contain p-2"
                 />
               </div>
             ) : (
-              <Globe className="h-24 w-24 text-primary relative" />
+              <div className="relative h-32 w-32 md:h-40 md:w-40 rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white flex items-center justify-center">
+                <DynamicIcon name={config.appLogoUrl || "Globe"} className="h-20 w-20 text-primary" />
+              </div>
             )}
           </div>
           
