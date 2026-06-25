@@ -1,6 +1,6 @@
 import { getConfig } from '@/lib/config';
 import { Button } from '@/components/ui/button';
-import { Download, ShieldCheck, Zap, Globe, MessageSquare, Facebook, Users, Smartphone, Search, Database, FileText } from 'lucide-react';
+import { Download, ShieldCheck, Zap, MessageSquare, Facebook, Users, Search, Database, FileText } from 'lucide-react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -18,7 +18,8 @@ export default async function HomePage() {
               <Image 
                 src="/icon.webp" 
                 alt="Zobi Tech APK Logo" 
-                fill 
+                width={160}
+                height={160}
                 className="object-contain"
                 priority
               />
@@ -55,7 +56,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-      {/* Optimized Feature Cards for AEO */}
+      {/* Feature Cards */}
       <section className="w-full py-20 bg-card border-y flex justify-center">
         <div className="container px-4 md:px-6">
           <h2 className="text-3xl font-headline font-bold text-center mb-12">Why Choose Zobi Tech App?</h2>
@@ -108,6 +109,12 @@ export default async function HomePage() {
                  <Facebook className="h-10 w-10" />
                </div>
                <span className="font-body text-sm font-semibold">Official Facebook</span>
+             </Link>
+             <Link href={config.groupWhatsApp} target="_blank" className="flex flex-col items-center gap-2 group">
+               <div className="p-6 rounded-full bg-green-600/10 text-green-700 group-hover:bg-green-600/20 transition-all scale-100 group-hover:scale-110 shadow-lg">
+                 <Users className="h-10 w-10" />
+               </div>
+               <span className="font-body text-sm font-semibold">Join Group</span>
              </Link>
           </div>
         </div>

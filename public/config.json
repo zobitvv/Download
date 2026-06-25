@@ -1,10 +1,9 @@
-
 {
   "appName": "Zobi Tech",
   "appLogoUrl": "/icon.webp",
-  "launchMessage": "Welcome to Zobi Tech - Pakistan's Trusted Digital Companion.",
+  "launchMessage": "Welcome to Zobi Tech - Pakistan's #1 SIM Tracker and Digital Services App.",
   "contactWhatsApp": "https://wa.me/923409835287",
-  "groupWhatsApp": "https://chat.whatsapp.com/Gj9Q6o7o2X7L8W9z5S1G9X",
+  "groupWhatsApp": "https://chat.whatsapp.com/KZ0ap5suSxD4aRolhmWaDa",
   "facebookProfile": "https://facebook.com/zobitech",
   "theme": {
     "primaryColor": "#29ABE2",
@@ -12,12 +11,12 @@
     "accentColor": "#8E2DE2",
     "bodyFont": "Josefin Sans",
     "headlineFont": "Space Grotesk",
-    "contentDescription": "Official download and support portal for Zobi Tech Pakistan."
+    "contentDescription": "Official landing page for Zobi Tech APK. Download for SIM tracking, CNIC info, and bill checks."
   },
   "webViews": [],
   "dailyMessages": [
-    "Stay safe and stay connected with Zobi Tech.",
-    "Download the latest Zobi Tech APK for the best experience.",
-    "Need help? Contact us via WhatsApp or Facebook."
+    "Check your SIM ownership records instantly!",
+    "Verify your electricity bills without waiting.",
+    "The 2024 SIM database is now live in Zobi Tech."
   ]
 }
