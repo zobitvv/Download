@@ -8,7 +8,7 @@ import DailyMessageNotifier from '@/components/daily-message-notifier';
 
 export async function generateMetadata(): Promise<Metadata> {
   const config = await getConfig();
-  const baseUrl = 'https://zobitech.vercel.app'; // Replace with your actual domain
+  const baseUrl = 'https://zobitech.vercel.app';
 
   return {
     title: {

@@ -16,6 +16,7 @@ interface TopBarProps {
 
 export default function TopBar({ appName, appLogoUrl, contactWhatsApp, groupWhatsApp, facebookProfile }: TopBarProps): JSX.Element {
   const isLogoUrl = appLogoUrl?.startsWith('/') || appLogoUrl?.startsWith('http');
+  const shareUrl = 'https://zobitech.vercel.app/';
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -59,12 +60,12 @@ export default function TopBar({ appName, appLogoUrl, contactWhatsApp, groupWhat
             if (typeof navigator !== 'undefined' && navigator.share) {
               navigator.share({
                 title: appName,
-                text: `Check out ${appName}!`,
-                url: window.location.origin,
+                text: `Download the official ${appName} App for SIM Tracker & Bill Checks in Pakistan!`,
+                url: shareUrl,
               }).catch(console.error);
             } else {
               try {
-                navigator.clipboard.writeText(window.location.origin);
+                navigator.clipboard.writeText(shareUrl);
                 alert('App link copied to clipboard!');
               } catch (err) {
                 alert('Sharing is not supported on this browser.');
