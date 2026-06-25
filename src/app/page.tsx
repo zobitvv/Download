@@ -38,7 +38,7 @@ export default async function HomePage() {
           
           <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md px-4">
             <Button size="lg" className="h-16 px-10 text-xl rounded-full shadow-xl hover:scale-105 transition-all font-headline w-full sm:w-auto" asChild>
-              <Link href="https://github.com/zobitech/app/releases/latest/download/zobitech.apk">
+              <Link href="https://raw.githubusercontent.com/zobitvv/Download/main/src/app/ZobiTech.apk">
                 <Download className="mr-3 h-6 w-6" />
                 Download APK
               </Link>
