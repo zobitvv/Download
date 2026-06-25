@@ -2,7 +2,7 @@
 {
   "appName": "Zobi Tech",
   "appLogoUrl": "https://i.ibb.co/1Ygt4zfZ/1292611-ico.png",
-  "launchMessage": "Welcome to Zobi Tech! Your all-in-one utility app.",
+  "launchMessage": "Welcome to Zobi Tech - Your ultimate utility hub.",
   "contactWhatsApp": "https://wa.me/923318555417",
   "groupWhatsApp": "https://chat.whatsapp.com/KZ0ap5suSxD4aRolhmWaDa",
   "facebookProfile": "https://www.facebook.com/zobitech/",
@@ -12,67 +12,54 @@
     "accentColor": "#8E2DE2",
     "bodyFont": "Josefin Sans",
     "headlineFont": "Space Grotesk",
-    "contentDescription": "An app providing various web utilities and tools."
+    "contentDescription": "Utility application for SIM tracking, bill checking, and digital resources."
   },
   "webViews": [
     {
       "id": "simtracker",
-      "title": "SIM Tracker",
-      "icon": "Smartphone",
+      "title": "SIM TRACKER",
+      "icon": "Search",
       "thumbnailUrl": "https://image.winudf.com/v2/image1/Y29tLm51bWJlcmZpbmRlci5wYWtfc2ltX2RhdGFiYXNlLm5hZHJhZmluZGVyLmNuaWNfaWNvbl8xNjkwODcwNDQ3XzA1Mw/icon.webp?w=280&fakeurl=1&type=.webp",
-      "dataAiHint": "network signal",
       "contentUrl": "https://www.simstracker.com/",
-      "showDescriptiveText": true,
-      "descriptiveText": "Track SIM card information and details."
+      "showDescriptiveText": false
     },
     {
       "id": "mixdata",
       "title": "MIX DATA",
       "icon": "Database",
       "thumbnailUrl": "https://image.winudf.com/v2/image1/Y29tLm51bWJlcmZpbmRlci5wYWtfc2ltX2RhdGFiYXNlLm5hZHJhZmluZGVyLmNuaWNfaWNvbl8xNjkwODcwNDQ3XzA1Mw/icon.webp?w=280&fakeurl=1&type=.webp",
-      "dataAiHint": "data connection",
       "contentUrl": "https://simownership.com/search/",
-      "showDescriptiveText": true,
-      "descriptiveText": "Access various mixed data services."
-    },
-    {
-      "id": "cnicinfo",
-      "title": "CNIC Info",
-      "icon": "Fingerprint",
-      "thumbnailUrl": "https://i.ibb.co/xpPjHkx/id-card-line-black-icon-png-309153-removebg-preview.png",
-      "dataAiHint": "id card",
-      "contentUrl": "https://cnic.sims.pk/",
-      "showDescriptiveText": true,
-      "descriptiveText": "Get information related to CNIC.",
-      "itemSpecificLaunchMessage": "USE VPN if site show error"
+      "showDescriptiveText": false
     },
     {
       "id": "whatsappdp",
       "title": "Whatsapp Full DP",
-      "icon": "UserCircle",
+      "icon": "Image",
       "thumbnailUrl": "https://i.ibb.co/GvrxcLGJ/unnamed.jpg",
-      "dataAiHint": "profile picture",
       "contentUrl": "https://fullpp-by-bandaheali.onrender.com/",
-      "showDescriptiveText": true,
-      "descriptiveText": "View and manage WhatsApp display pictures."
+      "showDescriptiveText": false
+    },
+    {
+      "id": "cnicinfo",
+      "title": "CNIC Info",
+      "icon": "Contact",
+      "thumbnailUrl": "https://i.ibb.co/xpPjHkx/id-card-line-black-icon-png-309153-removebg-preview.png",
+      "contentUrl": "https://siminfo.info/",
+      "showDescriptiveText": false,
+      "itemSpecificLaunchMessage": "USE VPN if site show error"
     },
     {
       "id": "electricbill",
       "title": "CHECK electric bill",
       "icon": "FileText",
       "thumbnailUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUk8WbIei2HIcB2KBNq4-OW3vJVp3k_napyTNhzVuDCUyPjeZHvSydDdVjP6UY4yPEFRI&usqp=CAU",
-      "dataAiHint": "invoice electricity",
       "contentUrl": "https://pakbills.com/",
-      "showDescriptiveText": true,
-      "descriptiveText": "Check your electricity bill online.",
-      "itemSpecificLaunchMessage": "If the site doesn't load, it might have restrictions on being embedded. Try opening it directly in a browser."
+      "showDescriptiveText": false
     }
   ],
   "dailyMessages": [
-    "Tip of the day: Stay hydrated and take short breaks!",
-    "Remember to check out our new features!",
-    "Have a great day using Zobi Tech!",
-    "Don't forget to share Zobi Tech with your friends!",
-    "Your feedback is important to us. Let us know what you think!"
+    "Check your SIM ownership status today!",
+    "Pay your electricity bills conveniently through Zobi Tech.",
+    "Stay updated with our latest utility tools."
   ]
 }
