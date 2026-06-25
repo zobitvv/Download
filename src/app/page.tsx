@@ -6,6 +6,7 @@ import Image from 'next/image';
 
 export default async function HomePage() {
   const config = await getConfig();
+  const downloadLink = "https://github.com/zobitvv/p2/releases/download/apk/ZobiTech.apk";
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-background text-foreground">
@@ -37,7 +38,7 @@ export default async function HomePage() {
           
           <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md px-4">
             <Button size="lg" className="h-16 px-10 text-xl rounded-full shadow-xl hover:scale-105 transition-all font-headline w-full sm:w-auto" asChild>
-              <Link href="https://raw.githubusercontent.com/zobitvv/p2/main/ZobiTech.apk">
+              <Link href={downloadLink}>
                 <Download className="mr-3 h-6 w-6" />
                 Download APK Now
               </Link>

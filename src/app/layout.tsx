@@ -86,14 +86,14 @@ export default async function RootLayout({
 }>) {
   const config = await getConfig();
   
-  // Structured Data for AEO/GEO
+  // Structured Data for AEO/GEO - Updated Download URL
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": config.appName,
     "operatingSystem": "Android",
     "applicationCategory": "UtilitiesApplication",
-    "downloadUrl": "https://raw.githubusercontent.com/zobitvv/p2/main/ZobiTech.apk",
+    "downloadUrl": "https://github.com/zobitvv/p2/releases/download/apk/ZobiTech.apk",
     "featureList": [
       "SIM Tracker Pakistan",
       "CNIC Information Check",

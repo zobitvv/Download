@@ -10,14 +10,13 @@
     "accentColor": "#8E2DE2",
     "bodyFont": "Josefin Sans",
     "headlineFont": "Space Grotesk",
-    "contentDescription": "Official download page for Zobi Tech APK. SIM tracking and digital services in Pakistan."
+    "contentDescription": "Official Zobi Tech APK download page for SIM Tracking and digital services in Pakistan."
   },
   "webViews": [],
-  "launchMessage": "Welcome to the official Zobi Tech Download page!",
+  "launchMessage": "Welcome to the official Zobi Tech APK download page!",
   "dailyMessages": [
-    "Check SIM ownership instantly with Zobi Tech.",
-    "Stay updated with the latest Pak Sim Data 2024.",
-    "Official Zobi Tech App - Safe and Secure.",
-    "Fastest Live Tracker for all networks in Pakistan."
+    "Check your SIM ownership details instantly.",
+    "Verify your electricity bills with ease.",
+    "Trace mobile numbers securely and quickly."
   ]
 }
