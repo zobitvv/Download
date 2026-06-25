@@ -2,7 +2,7 @@
 {
   "appName": "Zobi Tech",
   "appLogoUrl": "https://i.ibb.co/1Ygt4zfZ/1292611-ico.png",
-  "launchMessage": "Welcome to Zobi Tech - Your ultimate utility hub.",
+  "launchMessage": "Welcome to Zobi Tech - Your Pakistani Digital Companion.",
   "contactWhatsApp": "https://wa.me/923318555417",
   "groupWhatsApp": "https://chat.whatsapp.com/KZ0ap5suSxD4aRolhmWaDa",
   "facebookProfile": "https://www.facebook.com/zobitech/",
@@ -12,54 +12,11 @@
     "accentColor": "#8E2DE2",
     "bodyFont": "Josefin Sans",
     "headlineFont": "Space Grotesk",
-    "contentDescription": "Utility application for SIM tracking, bill checking, and digital resources."
+    "contentDescription": "Download page for Zobi Tech APK."
   },
-  "webViews": [
-    {
-      "id": "simtracker",
-      "title": "SIM TRACKER",
-      "icon": "Search",
-      "thumbnailUrl": "https://image.winudf.com/v2/image1/Y29tLm51bWJlcmZpbmRlci5wYWtfc2ltX2RhdGFiYXNlLm5hZHJhZmluZGVyLmNuaWNfaWNvbl8xNjkwODcwNDQ3XzA1Mw/icon.webp?w=280&fakeurl=1&type=.webp",
-      "contentUrl": "https://www.simstracker.com/",
-      "showDescriptiveText": false
-    },
-    {
-      "id": "mixdata",
-      "title": "MIX DATA",
-      "icon": "Database",
-      "thumbnailUrl": "https://image.winudf.com/v2/image1/Y29tLm51bWJlcmZpbmRlci5wYWtfc2ltX2RhdGFiYXNlLm5hZHJhZmluZGVyLmNuaWNfaWNvbl8xNjkwODcwNDQ3XzA1Mw/icon.webp?w=280&fakeurl=1&type=.webp",
-      "contentUrl": "https://simownership.com/search/",
-      "showDescriptiveText": false
-    },
-    {
-      "id": "whatsappdp",
-      "title": "Whatsapp Full DP",
-      "icon": "Image",
-      "thumbnailUrl": "https://i.ibb.co/GvrxcLGJ/unnamed.jpg",
-      "contentUrl": "https://fullpp-by-bandaheali.onrender.com/",
-      "showDescriptiveText": false
-    },
-    {
-      "id": "cnicinfo",
-      "title": "CNIC Info",
-      "icon": "Contact",
-      "thumbnailUrl": "https://i.ibb.co/xpPjHkx/id-card-line-black-icon-png-309153-removebg-preview.png",
-      "contentUrl": "https://siminfo.info/",
-      "showDescriptiveText": false,
-      "itemSpecificLaunchMessage": "USE VPN if site show error"
-    },
-    {
-      "id": "electricbill",
-      "title": "CHECK electric bill",
-      "icon": "FileText",
-      "thumbnailUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUk8WbIei2HIcB2KBNq4-OW3vJVp3k_napyTNhzVuDCUyPjeZHvSydDdVjP6UY4yPEFRI&usqp=CAU",
-      "contentUrl": "https://pakbills.com/",
-      "showDescriptiveText": false
-    }
-  ],
+  "webViews": [],
   "dailyMessages": [
-    "Check your SIM ownership status today!",
-    "Pay your electricity bills conveniently through Zobi Tech.",
-    "Stay updated with our latest utility tools."
+    "Secure, fast, and always free.",
+    "The ultimate utility app for Pakistan."
   ]
 }
