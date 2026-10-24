@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 export default async function HomePage() {
   const config = await getConfig();
-  const downloadLink = "https://cdn.jsdelivr.net/gh/zobitvv/p2@8fcd0a6357cbe32e46a45cb600c35ab06802c0e0/ZobiTech.apk";
+  const downloadLink = "/api/download";
 
   return (
     <div className="flex flex-col items-center min-h-screen bg-background text-foreground">
